@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1950 F1 Season | PitlaneStats</title>
+<meta name="description" content="Results and standings for the 1950 Formula 1 World Championship.">
+<link rel="canonical" href="https://pitlanestats.com/seasons/1950/">
+<meta property="og:title" content="1950 F1 Season | PitlaneStats">
+<meta property="og:description" content="Results and standings for the 1950 Formula 1 World Championship.">
+<meta property="og:url" content="https://pitlanestats.com/seasons/1950/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PitlaneStats">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'f1-red': '#E10600',
+        'f1-dark': '#111118',
+        'f1-card': '#1A1A26',
+        'f1-border': '#252535',
+        'f1-text': '#8E8EA0',
+        'f1-white': '#EEEEF0',
+      },
+      fontFamily: {
+        heading: ['"Space Grotesk"', 'sans-serif'],
+        body: ['"Inter"', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', sans-serif; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker-scroll { animation: ticker 90s linear infinite; }
+.ticker-scroll:hover { animation-play-state: paused; }
+.checkered { background-image: repeating-conic-gradient(#EEEEF0 0% 25%, #252535 0% 50%); background-size: 20px 20px; }
+tr:hover td { background: rgba(225,6,0,0.04); }
+</style>
+
+</head>
+<body class="bg-f1-dark text-f1-white min-h-screen font-body">
+<div class="bg-f1-red overflow-hidden whitespace-nowrap"><div class="ticker-scroll inline-flex py-2 text-sm font-medium text-white"><span class="inline-block">🏁 2026 Champion: Andrea Kimi Antonelli</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏆 Most Wins: Lewis Hamilton (106)</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">👑 Most Titles: Michael Schumacher (7)</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">📊 77 Seasons Since 1950</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏎️ 1,156 Races in Database</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">👤 818 Drivers Tracked</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏁 2026 Champion: Andrea Kimi Antonelli</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏆 Most Wins: Lewis Hamilton (106)</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">👑 Most Titles: Michael Schumacher (7)</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">📊 77 Seasons Since 1950</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏎️ 1,156 Races in Database</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">👤 818 Drivers Tracked</span></div></div>
+<header class="sticky top-0 z-50 bg-f1-dark/95 backdrop-blur-sm border-b border-f1-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+<a href="../../index.html" class="flex items-center gap-3"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
+<span class="font-heading font-bold text-xl tracking-tight"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a href="../../seasons/index.html" class="text-f1-text hover:text-f1-white transition-colors">Seasons</a>
+<a href="../../drivers/index.html" class="text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<a href="../../constructors/index.html" class="text-f1-text hover:text-f1-white transition-colors">Teams</a>
+<a href="../../circuits/index.html" class="text-f1-text hover:text-f1-white transition-colors">Circuits</a>
+</nav>
+<button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="md:hidden text-f1-text">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+</div>
+<div id="mob-nav" class="hidden md:hidden border-t border-f1-border px-4 py-3 space-y-2">
+<a href="../../seasons/index.html" class="block text-f1-text hover:text-f1-white py-1">Seasons</a>
+<a href="../../drivers/index.html" class="block text-f1-text hover:text-f1-white py-1">Drivers</a>
+<a href="../../constructors/index.html" class="block text-f1-text hover:text-f1-white py-1">Teams</a>
+<a href="../../circuits/index.html" class="block text-f1-text hover:text-f1-white py-1">Circuits</a>
+</div></header>
+<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 sm:px-6 py-3 text-sm"><a href="../../index.html" class="text-f1-text hover:text-f1-white transition-colors">Home</a><span class="text-f1-border mx-2">/</span><a href="../index.html" class="text-f1-text hover:text-f1-white transition-colors">Seasons</a><span class="text-f1-border mx-2">/</span><span class="text-f1-white">1950</span></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "../../index.html"}, {"@type": "ListItem", "position": 2, "name": "Seasons", "item": "../index.html"}, {"@type": "ListItem", "position": 3, "name": "1950"}]}</script>
+<main><section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+<h1 class="font-heading text-4xl font-bold mb-2">1950 Formula 1 Season</h1>
+<p class="text-f1-text mb-8">7 races · Champion: Nino Farina</p>
+<div class="grid lg:grid-cols-2 gap-8 mb-12">
+<div><h2 class="font-heading text-xl font-bold mb-4">Driver Standings</h2>
+<div class="overflow-x-auto bg-f1-card border border-f1-border rounded-xl"><table class="w-full text-sm">
+<thead><tr class="border-b-2 border-f1-red text-left text-f1-text uppercase text-xs tracking-wider">
+<th class="py-3 px-4">Pos</th><th class="py-3 px-4">Driver</th><th class="py-3 px-4">Team</th><th class="py-3 px-4 text-center">Pts</th><th class="py-3 px-4 text-center">Wins</th></tr></thead>
+<tbody><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">1</td>
+<td class="py-2.5 px-4"><a href="../../drivers/farina/index.html" class="hover:text-f1-red transition-colors">Nino Farina</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="../../constructors/alfa/index.html" class="text-f1-text hover:text-f1-white">Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">30</td>
+<td class="py-2.5 px-4 text-center">3</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">2</td>
+<td class="py-2.5 px-4"><a href="../../drivers/fangio/index.html" class="hover:text-f1-red transition-colors">Juan Fangio</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="../../constructors/alfa/index.html" class="text-f1-text hover:text-f1-white">Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">27</td>
+<td class="py-2.5 px-4 text-center">3</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">3</td>
+<td class="py-2.5 px-4"><a href="../../drivers/fagioli/index.html" class="hover:text-f1-red transition-colors">Luigi Fagioli</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="../../constructors/alfa/index.html" class="text-f1-text hover:text-f1-white">Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">24</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">4</td>
+<td class="py-2.5 px-4"><a href="../../drivers/rosier/index.html" class="hover:text-f1-red transition-colors">Louis Rosier</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/lago/index.html" class="text-f1-text hover:text-f1-white">Talbot-Lago</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">13</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">5</td>
+<td class="py-2.5 px-4"><a href="../../drivers/ascari/index.html" class="hover:text-f1-red transition-colors">Alberto Ascari</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#DC0000"></span><a href="../../constructors/ferrari/index.html" class="text-f1-text hover:text-f1-white">Ferrari</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">11</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">6</td>
+<td class="py-2.5 px-4"><a href="../../drivers/parsons/index.html" class="hover:text-f1-red transition-colors">Johnnie Parsons</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">9</td>
+<td class="py-2.5 px-4 text-center">1</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">7</td>
+<td class="py-2.5 px-4"><a href="../../drivers/holland/index.html" class="hover:text-f1-red transition-colors">Bill Holland</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/deidt/index.html" class="text-f1-text hover:text-f1-white">Deidt</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">6</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">8</td>
+<td class="py-2.5 px-4"><a href="../../drivers/bira/index.html" class="hover:text-f1-red transition-colors">Prince Bira</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">5</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">9</td>
+<td class="py-2.5 px-4"><a href="../../drivers/whitehead/index.html" class="hover:text-f1-red transition-colors">Peter Whitehead</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#DC0000"></span><a href="../../constructors/ferrari/index.html" class="text-f1-text hover:text-f1-white">Ferrari</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">4</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">10</td>
+<td class="py-2.5 px-4"><a href="../../drivers/chiron/index.html" class="hover:text-f1-red transition-colors">Louis Chiron</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">4</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">11</td>
+<td class="py-2.5 px-4"><a href="../../drivers/reg_parnell/index.html" class="hover:text-f1-red transition-colors">Reg Parnell</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="../../constructors/alfa/index.html" class="text-f1-text hover:text-f1-white">Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">4</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">12</td>
+<td class="py-2.5 px-4"><a href="../../drivers/rose/index.html" class="hover:text-f1-red transition-colors">Mauri Rose</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/deidt/index.html" class="text-f1-text hover:text-f1-white">Deidt</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">4</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">13</td>
+<td class="py-2.5 px-4"><a href="../../drivers/serafini/index.html" class="hover:text-f1-red transition-colors">Dorino Serafini</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#DC0000"></span><a href="../../constructors/ferrari/index.html" class="text-f1-text hover:text-f1-white">Ferrari</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">3</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">14</td>
+<td class="py-2.5 px-4"><a href="../../drivers/cabantous/index.html" class="hover:text-f1-red transition-colors">Yves Cabantous</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/lago/index.html" class="text-f1-text hover:text-f1-white">Talbot-Lago</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">3</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">15</td>
+<td class="py-2.5 px-4"><a href="../../drivers/sommer/index.html" class="hover:text-f1-red transition-colors">Raymond Sommer</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#DC0000"></span><a href="../../constructors/ferrari/index.html" class="text-f1-text hover:text-f1-white">Ferrari</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">3</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">16</td>
+<td class="py-2.5 px-4"><a href="../../drivers/manzon/index.html" class="hover:text-f1-red transition-colors">Robert Manzon</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/simca/index.html" class="text-f1-text hover:text-f1-white">Simca</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">3</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">17</td>
+<td class="py-2.5 px-4"><a href="../../drivers/green/index.html" class="hover:text-f1-red transition-colors">Cecil Green</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">3</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">18</td>
+<td class="py-2.5 px-4"><a href="../../drivers/etancelin/index.html" class="hover:text-f1-red transition-colors">Philippe Étancelin</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/lago/index.html" class="text-f1-text hover:text-f1-white">Talbot-Lago</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">3</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">19</td>
+<td class="py-2.5 px-4"><a href="../../drivers/bonetto/index.html" class="hover:text-f1-red transition-colors">Felice Bonetto</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">2</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">20</td>
+<td class="py-2.5 px-4"><a href="../../drivers/chaboud/index.html" class="hover:text-f1-red transition-colors">Eugène Chaboud</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/lago/index.html" class="text-f1-text hover:text-f1-white">Talbot-Lago</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">1</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">21</td>
+<td class="py-2.5 px-4"><a href="../../drivers/bettenhausen/index.html" class="hover:text-f1-red transition-colors">Tony Bettenhausen</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">1</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12">22</td>
+<td class="py-2.5 px-4"><a href="../../drivers/chitwood/index.html" class="hover:text-f1-red transition-colors">Joie Chitwood</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">1</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/graffenried/index.html" class="hover:text-f1-red transition-colors">Toulo de Graffenried</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/gerard/index.html" class="hover:text-f1-red transition-colors">Bob Gerard</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/era/index.html" class="text-f1-text hover:text-f1-white">ERA</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/villoresi/index.html" class="hover:text-f1-red transition-colors">Luigi Villoresi</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#DC0000"></span><a href="../../constructors/ferrari/index.html" class="text-f1-text hover:text-f1-white">Ferrari</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/wallard/index.html" class="hover:text-f1-red transition-colors">Lee Wallard</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/moore/index.html" class="text-f1-text hover:text-f1-white">Moore</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/pozzi/index.html" class="hover:text-f1-red transition-colors">Charles Pozzi</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/lago/index.html" class="text-f1-text hover:text-f1-white">Talbot-Lago</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/claes/index.html" class="hover:text-f1-red transition-colors">Johnny Claes</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/lago/index.html" class="text-f1-text hover:text-f1-white">Talbot-Lago</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/levegh/index.html" class="hover:text-f1-red transition-colors">Pierre Levegh</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/lago/index.html" class="text-f1-text hover:text-f1-white">Talbot-Lago</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/harrison/index.html" class="hover:text-f1-red transition-colors">Cuth Harrison</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/era/index.html" class="text-f1-text hover:text-f1-white">ERA</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/faulkner/index.html" class="hover:text-f1-red transition-colors">Walt Faulkner</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/pagani/index.html" class="hover:text-f1-red transition-colors">Nello Pagani</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/schell/index.html" class="hover:text-f1-red transition-colors">Harry Schell</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/cooper/index.html" class="text-f1-text hover:text-f1-white">Cooper</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/george_connor/index.html" class="hover:text-f1-red transition-colors">George Connor</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/lesovsky/index.html" class="text-f1-text hover:text-f1-white">Lesovsky</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/hampshire/index.html" class="hover:text-f1-red transition-colors">David Hampshire</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/crossley/index.html" class="hover:text-f1-red transition-colors">Geoff Crossley</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/alta/index.html" class="text-f1-text hover:text-f1-white">Alta</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/paul_russo/index.html" class="hover:text-f1-red transition-colors">Paul Russo</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/nichels/index.html" class="text-f1-text hover:text-f1-white">Nichels</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/branca/index.html" class="hover:text-f1-red transition-colors">Toni Branca</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/shawe_taylor/index.html" class="hover:text-f1-red transition-colors">Brian Shawe Taylor</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/fry/index.html" class="hover:text-f1-red transition-colors">Joe Fry</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/flaherty/index.html" class="hover:text-f1-red transition-colors">Pat Flaherty</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/fohr/index.html" class="hover:text-f1-red transition-colors">Myron Fohr</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF6600"></span><a href="../../constructors/marchese/index.html" class="text-f1-text hover:text-f1-white">Marchese</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/darter/index.html" class="hover:text-f1-red transition-colors">Duane Carter</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/stevens/index.html" class="text-f1-text hover:text-f1-white">Stevens</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/hellings/index.html" class="hover:text-f1-red transition-colors">Mack Hellings</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/mcgrath/index.html" class="hover:text-f1-red transition-colors">Jack McGrath</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/ruttman/index.html" class="hover:text-f1-red transition-colors">Troy Ruttman</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/lesovsky/index.html" class="text-f1-text hover:text-f1-white">Lesovsky</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/hartley/index.html" class="hover:text-f1-red transition-colors">Gene Hartley</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/langley/index.html" class="text-f1-text hover:text-f1-white">Langley</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/davies/index.html" class="hover:text-f1-red transition-colors">Jimmy Davies</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/ewing/index.html" class="text-f1-text hover:text-f1-white">Ewing</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/mcdowell/index.html" class="hover:text-f1-red transition-colors">Johnny McDowell</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/walt_brown/index.html" class="hover:text-f1-red transition-colors">Walt Brown</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/webb/index.html" class="hover:text-f1-red transition-colors">Travis Webb</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/hoyt/index.html" class="hover:text-f1-red transition-colors">Jerry Hoyt</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/ader/index.html" class="hover:text-f1-red transition-colors">Walt Ader</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/rae/index.html" class="text-f1-text hover:text-f1-white">Rae</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/holmes/index.html" class="hover:text-f1-red transition-colors">Jackie Holmes</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/olson/index.html" class="text-f1-text hover:text-f1-white">Olson</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/rathmann/index.html" class="hover:text-f1-red transition-colors">Jim Rathmann</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/wetteroth/index.html" class="text-f1-text hover:text-f1-white">Wetteroth</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/murray/index.html" class="hover:text-f1-red transition-colors">David Murray</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/gonzalez/index.html" class="hover:text-f1-red transition-colors">José Froilán González</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/guy_mairesse/index.html" class="hover:text-f1-red transition-colors">Guy Mairesse</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/lago/index.html" class="text-f1-text hover:text-f1-white">Talbot-Lago</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/rol/index.html" class="hover:text-f1-red transition-colors">Franco Rol</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/kelly/index.html" class="hover:text-f1-red transition-colors">Joe Kelly</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/alta/index.html" class="text-f1-text hover:text-f1-white">Alta</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/taruffi/index.html" class="hover:text-f1-red transition-colors">Piero Taruffi</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="../../constructors/alfa/index.html" class="text-f1-text hover:text-f1-white">Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/martin/index.html" class="hover:text-f1-red transition-colors">Eugène Martin</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/lago/index.html" class="text-f1-text hover:text-f1-white">Talbot-Lago</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/trintignant/index.html" class="hover:text-f1-red transition-colors">Maurice Trintignant</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/simca/index.html" class="text-f1-text hover:text-f1-white">Simca</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/biondetti/index.html" class="hover:text-f1-red transition-colors">Clemente Biondetti</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#DC0000"></span><a href="../../constructors/ferrari/index.html" class="text-f1-text hover:text-f1-white">Ferrari</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/louveau/index.html" class="hover:text-f1-red transition-colors">Henri Louveau</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/lago/index.html" class="text-f1-text hover:text-f1-white">Talbot-Lago</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/peter_walker/index.html" class="hover:text-f1-red transition-colors">Peter Walker</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/era/index.html" class="text-f1-text hover:text-f1-white">ERA</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/rolt/index.html" class="hover:text-f1-red transition-colors">Tony Rolt</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/era/index.html" class="text-f1-text hover:text-f1-white">ERA</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/comotti/index.html" class="hover:text-f1-red transition-colors">Franco Comotti</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/leslie_johnson/index.html" class="hover:text-f1-red transition-colors">Leslie Johnson</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/era/index.html" class="text-f1-text hover:text-f1-white">ERA</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/pian/index.html" class="hover:text-f1-red transition-colors">Alfredo Pián</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/sanesi/index.html" class="hover:text-f1-red transition-colors">Consalvo Sanesi</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="../../constructors/alfa/index.html" class="text-f1-text hover:text-f1-white">Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/banks/index.html" class="hover:text-f1-red transition-colors">Henry Banks</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/schindler/index.html" class="hover:text-f1-red transition-colors">Bill Schindler</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/snowberger/index.html" class="text-f1-text hover:text-f1-white">Snowberger</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/pietsch/index.html" class="hover:text-f1-red transition-colors">Paul Pietsch</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/maserati/index.html" class="text-f1-text hover:text-f1-white">Maserati</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/levrett/index.html" class="hover:text-f1-red transition-colors">Bayliss Levrett</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/adams/index.html" class="text-f1-text hover:text-f1-white">Adams</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/cantrell/index.html" class="hover:text-f1-red transition-colors">Bill Cantrell</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/adams/index.html" class="text-f1-text hover:text-f1-white">Adams</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/agabashian/index.html" class="hover:text-f1-red transition-colors">Fred Agabashian</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/jackson/index.html" class="hover:text-f1-red transition-colors">Jimmy Jackson</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/hanks/index.html" class="hover:text-f1-red transition-colors">Sam Hanks</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/dick_rathmann/index.html" class="hover:text-f1-red transition-colors">Dick Rathmann</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/watson/index.html" class="text-f1-text hover:text-f1-white">Watson</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4 font-heading font-bold w-12"></td>
+<td class="py-2.5 px-4"><a href="../../drivers/dinsmore/index.html" class="hover:text-f1-red transition-colors">Duke Dinsmore</a></td>
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="../../constructors/kurtis_kraft/index.html" class="text-f1-text hover:text-f1-white">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td></tr></tbody></table></div></div>
+</div>
+<h2 class="font-heading text-xl font-bold mb-4">Races</h2>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"><a href="../../races/1950/1/index.html" class="bg-f1-card border border-f1-border rounded-lg p-4 hover:border-f1-text transition-colors block">
+<div class="flex justify-between items-start mb-2"><span class="text-f1-text text-xs">R1</span><span class="text-f1-text text-xs">1950-05-13</span></div>
+<div class="font-heading font-semibold text-sm mb-1">British Grand Prix</div>
+<div class="text-f1-text text-xs mb-2">Silverstone Circuit</div>
+<div class="text-f1-red text-sm font-medium">🏆 Nino Farina</div></a><a href="../../races/1950/2/index.html" class="bg-f1-card border border-f1-border rounded-lg p-4 hover:border-f1-text transition-colors block">
+<div class="flex justify-between items-start mb-2"><span class="text-f1-text text-xs">R2</span><span class="text-f1-text text-xs">1950-05-21</span></div>
+<div class="font-heading font-semibold text-sm mb-1">Monaco Grand Prix</div>
+<div class="text-f1-text text-xs mb-2">Circuit de Monaco</div>
+<div class="text-f1-red text-sm font-medium">🏆 Juan Fangio</div></a><a href="../../races/1950/3/index.html" class="bg-f1-card border border-f1-border rounded-lg p-4 hover:border-f1-text transition-colors block">
+<div class="flex justify-between items-start mb-2"><span class="text-f1-text text-xs">R3</span><span class="text-f1-text text-xs">1950-05-30</span></div>
+<div class="font-heading font-semibold text-sm mb-1">Indianapolis 500</div>
+<div class="text-f1-text text-xs mb-2">Indianapolis Motor Speedway</div>
+<div class="text-f1-red text-sm font-medium">🏆 Johnnie Parsons</div></a><a href="../../races/1950/4/index.html" class="bg-f1-card border border-f1-border rounded-lg p-4 hover:border-f1-text transition-colors block">
+<div class="flex justify-between items-start mb-2"><span class="text-f1-text text-xs">R4</span><span class="text-f1-text text-xs">1950-06-04</span></div>
+<div class="font-heading font-semibold text-sm mb-1">Swiss Grand Prix</div>
+<div class="text-f1-text text-xs mb-2">Circuit Bremgarten</div>
+<div class="text-f1-red text-sm font-medium">🏆 Nino Farina</div></a><a href="../../races/1950/5/index.html" class="bg-f1-card border border-f1-border rounded-lg p-4 hover:border-f1-text transition-colors block">
+<div class="flex justify-between items-start mb-2"><span class="text-f1-text text-xs">R5</span><span class="text-f1-text text-xs">1950-06-18</span></div>
+<div class="font-heading font-semibold text-sm mb-1">Belgian Grand Prix</div>
+<div class="text-f1-text text-xs mb-2">Circuit de Spa-Francorchamps</div>
+<div class="text-f1-red text-sm font-medium">🏆 Juan Fangio</div></a><a href="../../races/1950/6/index.html" class="bg-f1-card border border-f1-border rounded-lg p-4 hover:border-f1-text transition-colors block">
+<div class="flex justify-between items-start mb-2"><span class="text-f1-text text-xs">R6</span><span class="text-f1-text text-xs">1950-07-02</span></div>
+<div class="font-heading font-semibold text-sm mb-1">French Grand Prix</div>
+<div class="text-f1-text text-xs mb-2">Reims-Gueux</div>
+<div class="text-f1-red text-sm font-medium">🏆 Juan Fangio</div></a><a href="../../races/1950/7/index.html" class="bg-f1-card border border-f1-border rounded-lg p-4 hover:border-f1-text transition-colors block">
+<div class="flex justify-between items-start mb-2"><span class="text-f1-text text-xs">R7</span><span class="text-f1-text text-xs">1950-09-03</span></div>
+<div class="font-heading font-semibold text-sm mb-1">Italian Grand Prix</div>
+<div class="text-f1-text text-xs mb-2">Autodromo Nazionale di Monza</div>
+<div class="text-f1-red text-sm font-medium">🏆 Nino Farina</div></a></div></section></main>
+<footer class="border-t border-f1-border mt-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+<div class="grid md:grid-cols-4 gap-8 mb-8">
+<div><a href="../../index.html" class="flex items-center gap-2 mb-4"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
+<span class="font-heading font-bold text-lg"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
+<p class="text-f1-text text-sm">The most comprehensive Formula 1 statistics database.</p></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">Explore</h4>
+<div class="space-y-2 text-sm">
+<a href="../../seasons/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Seasons</a>
+<a href="../../drivers/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<a href="../../constructors/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Teams</a>
+<a href="../../circuits/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Circuits</a></div></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">Data</h4>
+<div class="space-y-2 text-sm">
+<span class="block text-f1-text">Powered by Jolpica F1 API</span>
+<span class="block text-f1-text">Ergast Compatible</span></div></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">About</h4>
+<p class="text-f1-text text-sm">Data sourced from the Jolpica F1 API (Ergast compatible). Not affiliated with Formula 1, FIA, or any team.</p></div>
+</div>
+<div class="border-t border-f1-border pt-6 text-center text-f1-text text-sm">&copy; 2025 PitlaneStats.com</div>
+</div></footer>
+</body></html>

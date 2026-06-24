@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All F1 Seasons | PitlaneStats</title>
+<meta name="description" content="Complete list of all 77 Formula 1 seasons with champions and results.">
+<link rel="canonical" href="https://pitlanestats.com/seasons/">
+<meta property="og:title" content="All F1 Seasons | PitlaneStats">
+<meta property="og:description" content="Complete list of all 77 Formula 1 seasons with champions and results.">
+<meta property="og:url" content="https://pitlanestats.com/seasons/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PitlaneStats">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'f1-red': '#E10600',
+        'f1-dark': '#111118',
+        'f1-card': '#1A1A26',
+        'f1-border': '#252535',
+        'f1-text': '#8E8EA0',
+        'f1-white': '#EEEEF0',
+      },
+      fontFamily: {
+        heading: ['"Space Grotesk"', 'sans-serif'],
+        body: ['"Inter"', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', sans-serif; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker-scroll { animation: ticker 90s linear infinite; }
+.ticker-scroll:hover { animation-play-state: paused; }
+.checkered { background-image: repeating-conic-gradient(#EEEEF0 0% 25%, #252535 0% 50%); background-size: 20px 20px; }
+tr:hover td { background: rgba(225,6,0,0.04); }
+</style>
+
+</head>
+<body class="bg-f1-dark text-f1-white min-h-screen font-body">
+<div class="bg-f1-red overflow-hidden whitespace-nowrap"><div class="ticker-scroll inline-flex py-2 text-sm font-medium text-white"><span class="inline-block">🏁 2026 Champion: Andrea Kimi Antonelli</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏆 Most Wins: Lewis Hamilton (106)</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">👑 Most Titles: Michael Schumacher (7)</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">📊 77 Seasons Since 1950</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏎️ 1,156 Races in Database</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">👤 818 Drivers Tracked</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏁 2026 Champion: Andrea Kimi Antonelli</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏆 Most Wins: Lewis Hamilton (106)</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">👑 Most Titles: Michael Schumacher (7)</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">📊 77 Seasons Since 1950</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏎️ 1,156 Races in Database</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">👤 818 Drivers Tracked</span></div></div>
+<header class="sticky top-0 z-50 bg-f1-dark/95 backdrop-blur-sm border-b border-f1-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+<a href="../index.html" class="flex items-center gap-3"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
+<span class="font-heading font-bold text-xl tracking-tight"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a href="../seasons/index.html" class="text-f1-text hover:text-f1-white transition-colors">Seasons</a>
+<a href="../drivers/index.html" class="text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<a href="../constructors/index.html" class="text-f1-text hover:text-f1-white transition-colors">Teams</a>
+<a href="../circuits/index.html" class="text-f1-text hover:text-f1-white transition-colors">Circuits</a>
+</nav>
+<button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="md:hidden text-f1-text">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+</div>
+<div id="mob-nav" class="hidden md:hidden border-t border-f1-border px-4 py-3 space-y-2">
+<a href="../seasons/index.html" class="block text-f1-text hover:text-f1-white py-1">Seasons</a>
+<a href="../drivers/index.html" class="block text-f1-text hover:text-f1-white py-1">Drivers</a>
+<a href="../constructors/index.html" class="block text-f1-text hover:text-f1-white py-1">Teams</a>
+<a href="../circuits/index.html" class="block text-f1-text hover:text-f1-white py-1">Circuits</a>
+</div></header>
+<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 sm:px-6 py-3 text-sm"><a href="../index.html" class="text-f1-text hover:text-f1-white transition-colors">Home</a><span class="text-f1-border mx-2">/</span><span class="text-f1-white">Seasons</span></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "../index.html"}, {"@type": "ListItem", "position": 2, "name": "Seasons"}]}</script>
+<main><section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+<h1 class="font-heading text-4xl font-bold mb-2">All Seasons</h1>
+<p class="text-f1-text mb-8">Every F1 World Championship season from 1950 to 2026.</p>
+<div class="overflow-x-auto bg-f1-card border border-f1-border rounded-xl">
+<table class="w-full text-sm">
+<thead><tr class="border-b-2 border-f1-red text-left text-f1-text uppercase text-xs tracking-wider">
+<th class="py-3 px-4">Year</th><th class="py-3 px-4">Champion</th><th class="py-3 px-4">Team</th>
+<th class="py-3 px-4">Constructor Champion</th><th class="py-3 px-4 text-center">Races</th></tr></thead>
+<tbody><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2026/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2026</a></td>
+<td class="py-3 px-4">Andrea Kimi Antonelli</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text text-center">7</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2025/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2025</a></td>
+<td class="py-3 px-4">Lando Norris</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text text-center">24</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2024/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2024</a></td>
+<td class="py-3 px-4">Max Verstappen</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text text-center">24</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2023/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2023</a></td>
+<td class="py-3 px-4">Max Verstappen</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text text-center">22</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2022/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2022</a></td>
+<td class="py-3 px-4">Max Verstappen</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text text-center">22</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2021/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2021</a></td>
+<td class="py-3 px-4">Max Verstappen</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text text-center">22</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2020/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2020</a></td>
+<td class="py-3 px-4">Lewis Hamilton</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text text-center">17</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2019/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2019</a></td>
+<td class="py-3 px-4">Lewis Hamilton</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text text-center">21</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2018/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2018</a></td>
+<td class="py-3 px-4">Lewis Hamilton</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text text-center">21</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2017/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2017</a></td>
+<td class="py-3 px-4">Lewis Hamilton</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text text-center">20</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2016/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2016</a></td>
+<td class="py-3 px-4">Nico Rosberg</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text text-center">21</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2015/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2015</a></td>
+<td class="py-3 px-4">Lewis Hamilton</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text text-center">19</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2014/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2014</a></td>
+<td class="py-3 px-4">Lewis Hamilton</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text text-center">19</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2013/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2013</a></td>
+<td class="py-3 px-4">Sebastian Vettel</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text text-center">19</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2012/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2012</a></td>
+<td class="py-3 px-4">Sebastian Vettel</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text text-center">20</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2011/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2011</a></td>
+<td class="py-3 px-4">Sebastian Vettel</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text text-center">19</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2010/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2010</a></td>
+<td class="py-3 px-4">Sebastian Vettel</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text">Red Bull</td>
+<td class="py-3 px-4 text-f1-text text-center">19</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2009/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2009</a></td>
+<td class="py-3 px-4">Jenson Button</td>
+<td class="py-3 px-4 text-f1-text">Brawn</td>
+<td class="py-3 px-4 text-f1-text">Brawn</td>
+<td class="py-3 px-4 text-f1-text text-center">17</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2008/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2008</a></td>
+<td class="py-3 px-4">Lewis Hamilton</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">18</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2007/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2007</a></td>
+<td class="py-3 px-4">Kimi Räikkönen</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">17</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2006/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2006</a></td>
+<td class="py-3 px-4">Fernando Alonso</td>
+<td class="py-3 px-4 text-f1-text">Renault</td>
+<td class="py-3 px-4 text-f1-text">Renault</td>
+<td class="py-3 px-4 text-f1-text text-center">18</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2005/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2005</a></td>
+<td class="py-3 px-4">Fernando Alonso</td>
+<td class="py-3 px-4 text-f1-text">Renault</td>
+<td class="py-3 px-4 text-f1-text">Renault</td>
+<td class="py-3 px-4 text-f1-text text-center">19</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2004/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2004</a></td>
+<td class="py-3 px-4">Michael Schumacher</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">18</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2003/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2003</a></td>
+<td class="py-3 px-4">Michael Schumacher</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2002/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2002</a></td>
+<td class="py-3 px-4">Michael Schumacher</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">17</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2001/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2001</a></td>
+<td class="py-3 px-4">Michael Schumacher</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">17</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="2000/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">2000</a></td>
+<td class="py-3 px-4">Michael Schumacher</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">17</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1999/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1999</a></td>
+<td class="py-3 px-4">Mika Häkkinen</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1998/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1998</a></td>
+<td class="py-3 px-4">Mika Häkkinen</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1997/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1997</a></td>
+<td class="py-3 px-4">Jacques Villeneuve</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text text-center">17</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1996/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1996</a></td>
+<td class="py-3 px-4">Damon Hill</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1995/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1995</a></td>
+<td class="py-3 px-4">Michael Schumacher</td>
+<td class="py-3 px-4 text-f1-text">Benetton</td>
+<td class="py-3 px-4 text-f1-text">Benetton</td>
+<td class="py-3 px-4 text-f1-text text-center">17</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1994/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1994</a></td>
+<td class="py-3 px-4">Michael Schumacher</td>
+<td class="py-3 px-4 text-f1-text">Benetton</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1993/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1993</a></td>
+<td class="py-3 px-4">Alain Prost</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1992/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1992</a></td>
+<td class="py-3 px-4">Nigel Mansell</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1991/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1991</a></td>
+<td class="py-3 px-4">Ayrton Senna</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1990/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1990</a></td>
+<td class="py-3 px-4">Ayrton Senna</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1989/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1989</a></td>
+<td class="py-3 px-4">Alain Prost</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1988/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1988</a></td>
+<td class="py-3 px-4">Ayrton Senna</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1987/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1987</a></td>
+<td class="py-3 px-4">Nelson Piquet</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1986/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1986</a></td>
+<td class="py-3 px-4">Alain Prost</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1985/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1985</a></td>
+<td class="py-3 px-4">Alain Prost</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1984/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1984</a></td>
+<td class="py-3 px-4">Niki Lauda</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1983/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1983</a></td>
+<td class="py-3 px-4">Nelson Piquet</td>
+<td class="py-3 px-4 text-f1-text">Brabham</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">15</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1982/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1982</a></td>
+<td class="py-3 px-4">Keke Rosberg</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1981/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1981</a></td>
+<td class="py-3 px-4">Nelson Piquet</td>
+<td class="py-3 px-4 text-f1-text">Brabham</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text text-center">15</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1980/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1980</a></td>
+<td class="py-3 px-4">Alan Jones</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text">Williams</td>
+<td class="py-3 px-4 text-f1-text text-center">14</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1979/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1979</a></td>
+<td class="py-3 px-4">Jody Scheckter</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">15</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1978/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1978</a></td>
+<td class="py-3 px-4">Mario Andretti</td>
+<td class="py-3 px-4 text-f1-text">Team Lotus</td>
+<td class="py-3 px-4 text-f1-text">Team Lotus</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1977/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1977</a></td>
+<td class="py-3 px-4">Niki Lauda</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">17</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1976/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1976</a></td>
+<td class="py-3 px-4">James Hunt</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">16</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1975/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1975</a></td>
+<td class="py-3 px-4">Niki Lauda</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">14</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1974/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1974</a></td>
+<td class="py-3 px-4">Emerson Fittipaldi</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text">McLaren</td>
+<td class="py-3 px-4 text-f1-text text-center">15</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1973/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1973</a></td>
+<td class="py-3 px-4">Jackie Stewart</td>
+<td class="py-3 px-4 text-f1-text">Tyrrell</td>
+<td class="py-3 px-4 text-f1-text">Team Lotus</td>
+<td class="py-3 px-4 text-f1-text text-center">15</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1972/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1972</a></td>
+<td class="py-3 px-4">Emerson Fittipaldi</td>
+<td class="py-3 px-4 text-f1-text">Team Lotus</td>
+<td class="py-3 px-4 text-f1-text">Team Lotus</td>
+<td class="py-3 px-4 text-f1-text text-center">12</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1971/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1971</a></td>
+<td class="py-3 px-4">Jackie Stewart</td>
+<td class="py-3 px-4 text-f1-text">Tyrrell</td>
+<td class="py-3 px-4 text-f1-text">Tyrrell</td>
+<td class="py-3 px-4 text-f1-text text-center">11</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1970/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1970</a></td>
+<td class="py-3 px-4">Jochen Rindt</td>
+<td class="py-3 px-4 text-f1-text">Team Lotus</td>
+<td class="py-3 px-4 text-f1-text">Team Lotus</td>
+<td class="py-3 px-4 text-f1-text text-center">13</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1969/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1969</a></td>
+<td class="py-3 px-4">Jackie Stewart</td>
+<td class="py-3 px-4 text-f1-text">Matra-Ford</td>
+<td class="py-3 px-4 text-f1-text">Matra-Ford</td>
+<td class="py-3 px-4 text-f1-text text-center">11</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1968/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1968</a></td>
+<td class="py-3 px-4">Graham Hill</td>
+<td class="py-3 px-4 text-f1-text">Lotus-Ford</td>
+<td class="py-3 px-4 text-f1-text">Lotus-Ford</td>
+<td class="py-3 px-4 text-f1-text text-center">12</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1967/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1967</a></td>
+<td class="py-3 px-4">Denny Hulme</td>
+<td class="py-3 px-4 text-f1-text">Brabham-Repco</td>
+<td class="py-3 px-4 text-f1-text">Brabham-Repco</td>
+<td class="py-3 px-4 text-f1-text text-center">11</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1966/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1966</a></td>
+<td class="py-3 px-4">Jack Brabham</td>
+<td class="py-3 px-4 text-f1-text">Brabham-Repco</td>
+<td class="py-3 px-4 text-f1-text">Brabham-Repco</td>
+<td class="py-3 px-4 text-f1-text text-center">9</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1965/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1965</a></td>
+<td class="py-3 px-4">Jim Clark</td>
+<td class="py-3 px-4 text-f1-text">Lotus-Climax</td>
+<td class="py-3 px-4 text-f1-text">Lotus-Climax</td>
+<td class="py-3 px-4 text-f1-text text-center">10</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1964/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1964</a></td>
+<td class="py-3 px-4">John Surtees</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">10</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1963/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1963</a></td>
+<td class="py-3 px-4">Jim Clark</td>
+<td class="py-3 px-4 text-f1-text">Lotus-Climax</td>
+<td class="py-3 px-4 text-f1-text">Lotus-Climax</td>
+<td class="py-3 px-4 text-f1-text text-center">10</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1962/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1962</a></td>
+<td class="py-3 px-4">Graham Hill</td>
+<td class="py-3 px-4 text-f1-text">BRM</td>
+<td class="py-3 px-4 text-f1-text">BRM</td>
+<td class="py-3 px-4 text-f1-text text-center">9</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1961/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1961</a></td>
+<td class="py-3 px-4">Phil Hill</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text text-center">8</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1960/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1960</a></td>
+<td class="py-3 px-4">Jack Brabham</td>
+<td class="py-3 px-4 text-f1-text">Cooper-Climax</td>
+<td class="py-3 px-4 text-f1-text">Cooper-Climax</td>
+<td class="py-3 px-4 text-f1-text text-center">10</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1959/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1959</a></td>
+<td class="py-3 px-4">Jack Brabham</td>
+<td class="py-3 px-4 text-f1-text">Cooper-Climax</td>
+<td class="py-3 px-4 text-f1-text">Cooper-Climax</td>
+<td class="py-3 px-4 text-f1-text text-center">9</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1958/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1958</a></td>
+<td class="py-3 px-4">Mike Hawthorn</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text">Vanwall</td>
+<td class="py-3 px-4 text-f1-text text-center">11</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1957/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1957</a></td>
+<td class="py-3 px-4">Juan Fangio</td>
+<td class="py-3 px-4 text-f1-text">Maserati</td>
+<td class="py-3 px-4 text-f1-text"></td>
+<td class="py-3 px-4 text-f1-text text-center">8</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1956/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1956</a></td>
+<td class="py-3 px-4">Juan Fangio</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text"></td>
+<td class="py-3 px-4 text-f1-text text-center">8</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1955/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1955</a></td>
+<td class="py-3 px-4">Juan Fangio</td>
+<td class="py-3 px-4 text-f1-text">Mercedes</td>
+<td class="py-3 px-4 text-f1-text"></td>
+<td class="py-3 px-4 text-f1-text text-center">7</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1954/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1954</a></td>
+<td class="py-3 px-4">Juan Fangio</td>
+<td class="py-3 px-4 text-f1-text">Maserati</td>
+<td class="py-3 px-4 text-f1-text"></td>
+<td class="py-3 px-4 text-f1-text text-center">9</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1953/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1953</a></td>
+<td class="py-3 px-4">Alberto Ascari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text"></td>
+<td class="py-3 px-4 text-f1-text text-center">9</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1952/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1952</a></td>
+<td class="py-3 px-4">Alberto Ascari</td>
+<td class="py-3 px-4 text-f1-text">Ferrari</td>
+<td class="py-3 px-4 text-f1-text"></td>
+<td class="py-3 px-4 text-f1-text text-center">8</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1951/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1951</a></td>
+<td class="py-3 px-4">Juan Fangio</td>
+<td class="py-3 px-4 text-f1-text">Alfa Romeo</td>
+<td class="py-3 px-4 text-f1-text"></td>
+<td class="py-3 px-4 text-f1-text text-center">8</td></tr><tr class="border-b border-f1-border">
+<td class="py-3 px-4"><a href="1950/index.html" class="font-heading font-bold text-f1-red hover:text-red-400 transition-colors">1950</a></td>
+<td class="py-3 px-4">Nino Farina</td>
+<td class="py-3 px-4 text-f1-text">Alfa Romeo</td>
+<td class="py-3 px-4 text-f1-text"></td>
+<td class="py-3 px-4 text-f1-text text-center">7</td></tr></tbody></table></div></section></main>
+<footer class="border-t border-f1-border mt-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+<div class="grid md:grid-cols-4 gap-8 mb-8">
+<div><a href="../index.html" class="flex items-center gap-2 mb-4"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
+<span class="font-heading font-bold text-lg"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
+<p class="text-f1-text text-sm">The most comprehensive Formula 1 statistics database.</p></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">Explore</h4>
+<div class="space-y-2 text-sm">
+<a href="../seasons/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Seasons</a>
+<a href="../drivers/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<a href="../constructors/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Teams</a>
+<a href="../circuits/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Circuits</a></div></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">Data</h4>
+<div class="space-y-2 text-sm">
+<span class="block text-f1-text">Powered by Jolpica F1 API</span>
+<span class="block text-f1-text">Ergast Compatible</span></div></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">About</h4>
+<p class="text-f1-text text-sm">Data sourced from the Jolpica F1 API (Ergast compatible). Not affiliated with Formula 1, FIA, or any team.</p></div>
+</div>
+<div class="border-t border-f1-border pt-6 text-center text-f1-text text-sm">&copy; 2025 PitlaneStats.com</div>
+</div></footer>
+</body></html>

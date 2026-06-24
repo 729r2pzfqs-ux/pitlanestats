@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All F1 Constructors | PitlaneStats</title>
+<meta name="description" content="Statistics for all 205 Formula 1 constructors.">
+<link rel="canonical" href="https://pitlanestats.com/constructors/">
+<meta property="og:title" content="All F1 Constructors | PitlaneStats">
+<meta property="og:description" content="Statistics for all 205 Formula 1 constructors.">
+<meta property="og:url" content="https://pitlanestats.com/constructors/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PitlaneStats">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'f1-red': '#E10600',
+        'f1-dark': '#111118',
+        'f1-card': '#1A1A26',
+        'f1-border': '#252535',
+        'f1-text': '#8E8EA0',
+        'f1-white': '#EEEEF0',
+      },
+      fontFamily: {
+        heading: ['"Space Grotesk"', 'sans-serif'],
+        body: ['"Inter"', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', sans-serif; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker-scroll { animation: ticker 90s linear infinite; }
+.ticker-scroll:hover { animation-play-state: paused; }
+.checkered { background-image: repeating-conic-gradient(#EEEEF0 0% 25%, #252535 0% 50%); background-size: 20px 20px; }
+tr:hover td { background: rgba(225,6,0,0.04); }
+</style>
+
+</head>
+<body class="bg-f1-dark text-f1-white min-h-screen font-body">
+<div class="bg-f1-red overflow-hidden whitespace-nowrap"><div class="ticker-scroll inline-flex py-2 text-sm font-medium text-white"><span class="inline-block">🏁 2026 Champion: Andrea Kimi Antonelli</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏆 Most Wins: Lewis Hamilton (106)</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">👑 Most Titles: Michael Schumacher (7)</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">📊 77 Seasons Since 1950</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏎️ 1,156 Races in Database</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">👤 818 Drivers Tracked</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏁 2026 Champion: Andrea Kimi Antonelli</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏆 Most Wins: Lewis Hamilton (106)</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">👑 Most Titles: Michael Schumacher (7)</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">📊 77 Seasons Since 1950</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">🏎️ 1,156 Races in Database</span> <span class="inline-block px-4 text-white/40">•</span> <span class="inline-block">👤 818 Drivers Tracked</span></div></div>
+<header class="sticky top-0 z-50 bg-f1-dark/95 backdrop-blur-sm border-b border-f1-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+<a href="../index.html" class="flex items-center gap-3"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
+<span class="font-heading font-bold text-xl tracking-tight"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a href="../seasons/index.html" class="text-f1-text hover:text-f1-white transition-colors">Seasons</a>
+<a href="../drivers/index.html" class="text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<a href="../constructors/index.html" class="text-f1-text hover:text-f1-white transition-colors">Teams</a>
+<a href="../circuits/index.html" class="text-f1-text hover:text-f1-white transition-colors">Circuits</a>
+</nav>
+<button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="md:hidden text-f1-text">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+</div>
+<div id="mob-nav" class="hidden md:hidden border-t border-f1-border px-4 py-3 space-y-2">
+<a href="../seasons/index.html" class="block text-f1-text hover:text-f1-white py-1">Seasons</a>
+<a href="../drivers/index.html" class="block text-f1-text hover:text-f1-white py-1">Drivers</a>
+<a href="../constructors/index.html" class="block text-f1-text hover:text-f1-white py-1">Teams</a>
+<a href="../circuits/index.html" class="block text-f1-text hover:text-f1-white py-1">Circuits</a>
+</div></header>
+<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 sm:px-6 py-3 text-sm"><a href="../index.html" class="text-f1-text hover:text-f1-white transition-colors">Home</a><span class="text-f1-border mx-2">/</span><span class="text-f1-white">Constructors</span></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "../index.html"}, {"@type": "ListItem", "position": 2, "name": "Constructors"}]}</script>
+<main><section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+<h1 class="font-heading text-4xl font-bold mb-2">All Constructors</h1>
+<p class="text-f1-text mb-8">205 constructors that have competed in Formula 1.</p>
+<div class="overflow-x-auto bg-f1-card border border-f1-border rounded-xl">
+<table class="w-full text-sm">
+<thead><tr class="border-b-2 border-f1-red text-left text-f1-text uppercase text-xs tracking-wider">
+<th class="py-3 px-4">Constructor</th><th class="py-3 px-4">Nationality</th>
+<th class="py-3 px-4 text-center">Titles</th><th class="py-3 px-4 text-center">Wins</th>
+<th class="py-3 px-4 text-center">Podiums</th><th class="py-3 px-4 text-center">Seasons</th>
+<th class="py-3 px-4 text-center">Points</th></tr></thead>
+<tbody><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#DC0000"></span><a href="ferrari/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#DC0000">Ferrari</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">16</td>
+<td class="py-2.5 px-4 text-center">250</td>
+<td class="py-2.5 px-4 text-center">854</td>
+<td class="py-2.5 px-4 text-center text-f1-text">77</td>
+<td class="py-2.5 px-4 text-center text-f1-text">11613</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF8700"></span><a href="mclaren/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF8700">McLaren</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">10</td>
+<td class="py-2.5 px-4 text-center">199</td>
+<td class="py-2.5 px-4 text-center">546</td>
+<td class="py-2.5 px-4 text-center text-f1-text">57</td>
+<td class="py-2.5 px-4 text-center text-f1-text">7904</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#27F4D2"></span><a href="mercedes/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#27F4D2">Mercedes</a></td>
+<td class="py-2.5 px-4 text-f1-text">German</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">9</td>
+<td class="py-2.5 px-4 text-center">137</td>
+<td class="py-2.5 px-4 text-center">319</td>
+<td class="py-2.5 px-4 text-center text-f1-text">19</td>
+<td class="py-2.5 px-4 text-center text-f1-text">8383</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#3671C6"></span><a href="red_bull/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#3671C6">Red Bull</a></td>
+<td class="py-2.5 px-4 text-f1-text">Austrian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">6</td>
+<td class="py-2.5 px-4 text-center">130</td>
+<td class="py-2.5 px-4 text-center">298</td>
+<td class="py-2.5 px-4 text-center text-f1-text">22</td>
+<td class="py-2.5 px-4 text-center text-f1-text">8166</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#64C4FF"></span><a href="williams/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#64C4FF">Williams</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">9</td>
+<td class="py-2.5 px-4 text-center">114</td>
+<td class="py-2.5 px-4 text-center">316</td>
+<td class="py-2.5 px-4 text-center text-f1-text">51</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3776</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFB800"></span><a href="team_lotus/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFB800">Team Lotus</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">4</td>
+<td class="py-2.5 px-4 text-center">45</td>
+<td class="py-2.5 px-4 text-center">114</td>
+<td class="py-2.5 px-4 text-center text-f1-text">29</td>
+<td class="py-2.5 px-4 text-center text-f1-text">995</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFD800"></span><a href="renault/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFD800">Renault</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">2</td>
+<td class="py-2.5 px-4 text-center">35</td>
+<td class="py-2.5 px-4 text-center">103</td>
+<td class="py-2.5 px-4 text-center text-f1-text">24</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1777</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#00CC00"></span><a href="benetton/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#00CC00">Benetton</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">1</td>
+<td class="py-2.5 px-4 text-center">27</td>
+<td class="py-2.5 px-4 text-center">102</td>
+<td class="py-2.5 px-4 text-center text-f1-text">16</td>
+<td class="py-2.5 px-4 text-center text-f1-text">862</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#006633"></span><a href="brabham/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#006633">Brabham</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">23</td>
+<td class="py-2.5 px-4 text-center">78</td>
+<td class="py-2.5 px-4 text-center text-f1-text">22</td>
+<td class="py-2.5 px-4 text-center text-f1-text">631</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#000099"></span><a href="tyrrell/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#000099">Tyrrell</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">1</td>
+<td class="py-2.5 px-4 text-center">23</td>
+<td class="py-2.5 px-4 text-center">77</td>
+<td class="py-2.5 px-4 text-center text-f1-text">29</td>
+<td class="py-2.5 px-4 text-center text-f1-text">711</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFB800"></span><a href="lotus-climax/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFB800">Lotus-Climax</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">2</td>
+<td class="py-2.5 px-4 text-center">22</td>
+<td class="py-2.5 px-4 text-center">31</td>
+<td class="py-2.5 px-4 text-center text-f1-text">7</td>
+<td class="py-2.5 px-4 text-center text-f1-text">281</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="brm/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">BRM</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">1</td>
+<td class="py-2.5 px-4 text-center">17</td>
+<td class="py-2.5 px-4 text-center">61</td>
+<td class="py-2.5 px-4 text-center text-f1-text">23</td>
+<td class="py-2.5 px-4 text-center text-f1-text">538</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="cooper-climax/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Cooper-Climax</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">2</td>
+<td class="py-2.5 px-4 text-center">12</td>
+<td class="py-2.5 px-4 text-center">44</td>
+<td class="py-2.5 px-4 text-center text-f1-text">9</td>
+<td class="py-2.5 px-4 text-center text-f1-text">336</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="alfa/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#C92D4B">Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-f1-text">Swiss</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">11</td>
+<td class="py-2.5 px-4 text-center">28</td>
+<td class="py-2.5 px-4 text-center text-f1-text">16</td>
+<td class="py-2.5 px-4 text-center text-f1-text">361</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFB800"></span><a href="lotus-ford/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFB800">Lotus-Ford</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">1</td>
+<td class="py-2.5 px-4 text-center">11</td>
+<td class="py-2.5 px-4 text-center">25</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">209</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="vanwall/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Vanwall</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">1</td>
+<td class="py-2.5 px-4 text-center">10</td>
+<td class="py-2.5 px-4 text-center">14</td>
+<td class="py-2.5 px-4 text-center text-f1-text">7</td>
+<td class="py-2.5 px-4 text-center text-f1-text">108</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="maserati/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Maserati</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">9</td>
+<td class="py-2.5 px-4 text-center">40</td>
+<td class="py-2.5 px-4 text-center text-f1-text">11</td>
+<td class="py-2.5 px-4 text-center text-f1-text">313</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="matra-ford/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Matra-Ford</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">1</td>
+<td class="py-2.5 px-4 text-center">9</td>
+<td class="py-2.5 px-4 text-center">15</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">130</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#0066FF"></span><a href="ligier/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#0066FF">Ligier</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">9</td>
+<td class="py-2.5 px-4 text-center">50</td>
+<td class="py-2.5 px-4 text-center text-f1-text">21</td>
+<td class="py-2.5 px-4 text-center text-f1-text">388</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#006633"></span><a href="brabham-repco/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#006633">Brabham-Repco</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">2</td>
+<td class="py-2.5 px-4 text-center">8</td>
+<td class="py-2.5 px-4 text-center">25</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">175</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C8FF00"></span><a href="brawn/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#C8FF00">Brawn</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">1</td>
+<td class="py-2.5 px-4 text-center">8</td>
+<td class="py-2.5 px-4 text-center">15</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">172</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="kurtis_kraft/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Kurtis Kraft</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">5</td>
+<td class="py-2.5 px-4 text-center">19</td>
+<td class="py-2.5 px-4 text-center text-f1-text">11</td>
+<td class="py-2.5 px-4 text-center text-f1-text">130</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF8700"></span><a href="mclaren-ford/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF8700">McLaren-Ford</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">4</td>
+<td class="py-2.5 px-4 text-center">16</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">143</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFD700"></span><a href="jordan/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFD700">Jordan</a></td>
+<td class="py-2.5 px-4 text-f1-text">Irish</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">4</td>
+<td class="py-2.5 px-4 text-center">19</td>
+<td class="py-2.5 px-4 text-center text-f1-text">15</td>
+<td class="py-2.5 px-4 text-center text-f1-text">291</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="watson/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Watson</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">3</td>
+<td class="py-2.5 px-4 text-center">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">9</td>
+<td class="py-2.5 px-4 text-center text-f1-text">36</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#DC0000"></span><a href="honda/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#DC0000">Honda</a></td>
+<td class="py-2.5 px-4 text-f1-text">Japanese</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">3</td>
+<td class="py-2.5 px-4 text-center">9</td>
+<td class="py-2.5 px-4 text-center text-f1-text">8</td>
+<td class="py-2.5 px-4 text-center text-f1-text">156</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF6600"></span><a href="march/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF6600">March</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">3</td>
+<td class="py-2.5 px-4 text-center">16</td>
+<td class="py-2.5 px-4 text-center text-f1-text">13</td>
+<td class="py-2.5 px-4 text-center text-f1-text">148</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="wolf/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Wolf</a></td>
+<td class="py-2.5 px-4 text-f1-text">Canadian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">3</td>
+<td class="py-2.5 px-4 text-center">13</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">79</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="cooper/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Cooper</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center">6</td>
+<td class="py-2.5 px-4 text-center text-f1-text">9</td>
+<td class="py-2.5 px-4 text-center text-f1-text">52</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="epperly/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Epperly</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">44</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="cooper-maserati/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Cooper-Maserati</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center">7</td>
+<td class="py-2.5 px-4 text-center text-f1-text">9</td>
+<td class="py-2.5 px-4 text-center text-f1-text">83</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#006633"></span><a href="brabham-climax/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#006633">Brabham-Climax</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center">11</td>
+<td class="py-2.5 px-4 text-center text-f1-text">6</td>
+<td class="py-2.5 px-4 text-center text-f1-text">78</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#006633"></span><a href="brabham-ford/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#006633">Brabham-Ford</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center">9</td>
+<td class="py-2.5 px-4 text-center text-f1-text">6</td>
+<td class="py-2.5 px-4 text-center text-f1-text">68</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFB800"></span><a href="lotus_f1/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFB800">Lotus F1</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center">25</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">706</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="kuzma/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Kuzma</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">10</td>
+<td class="py-2.5 px-4 text-center text-f1-text">21</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="porsche/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Porsche</a></td>
+<td class="py-2.5 px-4 text-f1-text">German</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">8</td>
+<td class="py-2.5 px-4 text-center text-f1-text">50</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFB800"></span><a href="lotus-brm/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFB800">Lotus-BRM</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">6</td>
+<td class="py-2.5 px-4 text-center text-f1-text">29</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="eagle-weslake/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Eagle-Weslake</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">13</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="shadow/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Shadow</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">6</td>
+<td class="py-2.5 px-4 text-center text-f1-text">7</td>
+<td class="py-2.5 px-4 text-center text-f1-text">59</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="hesketh/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Hesketh</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">7</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">48</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="penske/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Penske</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">23</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="stewart/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Stewart</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">47</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#6692FF"></span><a href="toro_rosso/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#6692FF">Toro Rosso</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">14</td>
+<td class="py-2.5 px-4 text-center text-f1-text">500</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="bmw_sauber/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#C92D4B">BMW Sauber</a></td>
+<td class="py-2.5 px-4 text-f1-text">German</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">17</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">308</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF87BC"></span><a href="racing_point/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF87BC">Racing Point</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">283</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#6692FF"></span><a href="alphatauri/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#6692FF">AlphaTauri</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">306</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF87BC"></span><a href="alpine/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF87BC">Alpine F1 Team</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center">7</td>
+<td class="py-2.5 px-4 text-center text-f1-text">6</td>
+<td class="py-2.5 px-4 text-center text-f1-text">574</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="lago/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Talbot-Lago</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">25</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="era/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">ERA</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="alta/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Alta</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="simca/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Simca</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="deidt/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Deidt</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">10</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="moore/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Moore</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="lesovsky/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Lesovsky</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">9</td>
+<td class="py-2.5 px-4 text-center text-f1-text">10</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="nichels/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Nichels</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF6600"></span><a href="marchese/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF6600">Marchese</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="stevens/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Stevens</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">6</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="langley/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Langley</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="ewing/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Ewing</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="rae/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Rae</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="olson/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Olson</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="wetteroth/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Wetteroth</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="snowberger/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Snowberger</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="adams/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Adams</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="milano/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Milano</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="hwm/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">HWM</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="veritas/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Veritas</a></td>
+<td class="py-2.5 px-4 text-f1-text">German</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="sherman/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Sherman</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="schroeder/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Schroeder</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="pawl/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Pawl</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="hall/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Hall</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="bromme/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Bromme</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="trevis/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Trevis</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="osca/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">OSCA</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="gordini/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Gordini</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">25</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="frazer_nash/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Frazer Nash</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="afm/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">AFM</a></td>
+<td class="py-2.5 px-4 text-f1-text">German</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="butterworth/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Aston Butterworth</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="connaught/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Connaught</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">8</td>
+<td class="py-2.5 px-4 text-center text-f1-text">17</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="bmw/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">BMW</a></td>
+<td class="py-2.5 px-4 text-f1-text">German</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="turner/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Turner</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="del_roy/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Del Roy</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="emw/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">EMW</a></td>
+<td class="py-2.5 px-4 text-f1-text">East German</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="phillips/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Phillips</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">7</td>
+<td class="py-2.5 px-4 text-center text-f1-text">7</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="pankratz/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Pankratz</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="klenk/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Klenk</a></td>
+<td class="py-2.5 px-4 text-f1-text">German</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="lancia/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Lancia</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">9</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="arzani-volpini/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Arzani-Volpini</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="bugatti/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Bugatti</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="emeryson/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Emeryson</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="dunn/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Dunn</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="elder/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Elder</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="vhristensen/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Christensen</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="sutton/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Sutton</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#229971"></span><a href="aston_martin/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#229971">Aston Martin</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">9</td>
+<td class="py-2.5 px-4 text-center text-f1-text">8</td>
+<td class="py-2.5 px-4 text-center text-f1-text">573</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="cooper-borgward/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Cooper-Borgward</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="jbw/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">JBW</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="cooper-osca/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Cooper-OSCA</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="tec-mec/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Tec-Mec</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="behra-porsche/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Behra-Porsche</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="meskowski/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Meskowski</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="scarab/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Scarab</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="cooper-castellotti/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Cooper-Castellotti</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="de_tomaso-osca/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">De Tomaso-Osca</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="gilby/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Gilby</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="ferguson/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Ferguson</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="mbm/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">MBM</a></td>
+<td class="py-2.5 px-4 text-f1-text">Swiss</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFB800"></span><a href="lotus-maserati/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFB800">Lotus-Maserati</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="de_tomaso-alfa_romeo/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#C92D4B">De Tomaso-Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#CC0000"></span><a href="lola/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#CC0000">Lola</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">10</td>
+<td class="py-2.5 px-4 text-center text-f1-text">27</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="enb/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">ENB</a></td>
+<td class="py-2.5 px-4 text-f1-text">Belgian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFB800"></span><a href="lotus-borgward/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFB800">Lotus-Borgward</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="lds/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">LDS</a></td>
+<td class="py-2.5 px-4 text-f1-text">South African</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="cooper-alfa_romeo/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#C92D4B">Cooper-Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="ats/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">ATS</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">8</td>
+<td class="py-2.5 px-4 text-center text-f1-text">7</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="scirocco/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Scirocco</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="tomaso/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">De Tomaso</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="brp/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">BRP</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">11</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="stebro/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Stebro</a></td>
+<td class="py-2.5 px-4 text-f1-text">Canadian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#006633"></span><a href="brabham-brm/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#006633">Brabham-BRM</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">13</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="derrington/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Derrington</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="lds-alfa_romeo/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#C92D4B">LDS-Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-f1-text">South African</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="re/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">RE</a></td>
+<td class="py-2.5 px-4 text-f1-text">Rhodesian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="eagle-climax/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Eagle-Climax</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF8700"></span><a href="mclaren-seren/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF8700">McLaren-Serenissima</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#DC0000"></span><a href="cooper-ferrari/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#DC0000">Cooper-Ferrari</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="shannon/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Shannon</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="lds-climax/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">LDS-Climax</a></td>
+<td class="py-2.5 px-4 text-f1-text">South African</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF8700"></span><a href="mclaren-brm/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF8700">McLaren-BRM</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">6</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="matra/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Matra</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">6</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">54</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="cooper-ats/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Cooper-ATS</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="protos/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Protos</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="cooper-brm/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Cooper-BRM</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">20</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="brm-ford/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">BRM-Ford</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF8700"></span><a href="mclaren-alfa_romeo/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF8700">McLaren-Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="surtees/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Surtees</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">9</td>
+<td class="py-2.5 px-4 text-center text-f1-text">54</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="bellasi/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Bellasi</a></td>
+<td class="py-2.5 px-4 text-f1-text">Swiss</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF6600"></span><a href="march-ford/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF6600">March-Ford</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">37</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="march-alfa_romeo/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#C92D4B">March-Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFB800"></span><a href="lotus-pw/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFB800">Lotus-Pratt &amp;amp; Whitney</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="tecno/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Tecno</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="politoys/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Politoys</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="connew/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Connew</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="iso_marlboro/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Iso Marlboro</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">6</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="ensign/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Ensign</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">10</td>
+<td class="py-2.5 px-4 text-center text-f1-text">19</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="trojan/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Trojan</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="amon/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Amon</a></td>
+<td class="py-2.5 px-4 text-f1-text">New Zealander</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="token/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Token</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="parnelli/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Parnelli</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">6</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="shadow-ford/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Shadow-Ford</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">10</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="fittipaldi/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Fittipaldi</a></td>
+<td class="py-2.5 px-4 text-f1-text">Brazilian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">8</td>
+<td class="py-2.5 px-4 text-center text-f1-text">44</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="hill/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Embassy Hill</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="maki/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Maki</a></td>
+<td class="py-2.5 px-4 text-f1-text">Japanese</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="lyncar/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Lyncar</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="shadow-matra/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Shadow-Matra</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="brabham-alfa_romeo/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#C92D4B">Brabham-Alfa Romeo</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">18</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="boro/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Boro</a></td>
+<td class="py-2.5 px-4 text-f1-text">Dutch</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="kojima/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Kojima</a></td>
+<td class="py-2.5 px-4 text-f1-text">Japanese</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="lec/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">LEC</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="merzario/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Merzario</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF6600"></span><a href="arrows/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF6600">Arrows</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">8</td>
+<td class="py-2.5 px-4 text-center text-f1-text">19</td>
+<td class="py-2.5 px-4 text-center text-f1-text">142</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="theodore/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Theodore</a></td>
+<td class="py-2.5 px-4 text-f1-text">Hong Kong</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="martini/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Martini</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="rebaque/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Rebaque</a></td>
+<td class="py-2.5 px-4 text-f1-text">Mexican</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="osella/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Osella</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">11</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="toleman/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Toleman</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">26</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="ram/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">RAM</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="spirit/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Spirit</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFD700"></span><a href="minardi/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFD700">Minardi</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">21</td>
+<td class="py-2.5 px-4 text-center text-f1-text">38</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="zakspeed/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Zakspeed</a></td>
+<td class="py-2.5 px-4 text-f1-text">German</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="ags/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">AGS</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">6</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="larrousse/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Larrousse</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">8</td>
+<td class="py-2.5 px-4 text-center text-f1-text">22</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="coloni/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Coloni</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="rial/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Rial</a></td>
+<td class="py-2.5 px-4 text-f1-text">German</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">6</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="eurobrun/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Euro Brun</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="dallara/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Dallara</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">15</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="onyx/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Onyx</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">6</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="leyton/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Leyton House</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">8</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="lambo/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Lambo</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="footwork/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Footwork</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">6</td>
+<td class="py-2.5 px-4 text-center text-f1-text">25</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="fondmetal/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Fondmetal</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="moda/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Andrea Moda</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#C92D4B"></span><a href="sauber/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#C92D4B">Sauber</a></td>
+<td class="py-2.5 px-4 text-f1-text">Swiss</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">11</td>
+<td class="py-2.5 px-4 text-center text-f1-text">24</td>
+<td class="py-2.5 px-4 text-center text-f1-text">631</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="simtek/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Simtek</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="pacific/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Pacific</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="forti/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Forti</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#0033CC"></span><a href="prost/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#0033CC">Prost</a></td>
+<td class="py-2.5 px-4 text-f1-text">French</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">35</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#0099FF"></span><a href="bar/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#0099FF">BAR</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">15</td>
+<td class="py-2.5 px-4 text-center text-f1-text">7</td>
+<td class="py-2.5 px-4 text-center text-f1-text">227</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#006633"></span><a href="jaguar/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#006633">Jaguar</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">5</td>
+<td class="py-2.5 px-4 text-center text-f1-text">49</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#CC0000"></span><a href="toyota/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#CC0000">Toyota</a></td>
+<td class="py-2.5 px-4 text-f1-text">Japanese</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">13</td>
+<td class="py-2.5 px-4 text-center text-f1-text">8</td>
+<td class="py-2.5 px-4 text-center text-f1-text">278</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="mf1/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">MF1</a></td>
+<td class="py-2.5 px-4 text-f1-text">Russian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFFFFF"></span><a href="super_aguri/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFFFFF">Super Aguri</a></td>
+<td class="py-2.5 px-4 text-f1-text">Japanese</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">4</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF6600"></span><a href="spyker_mf1/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF6600">Spyker MF1</a></td>
+<td class="py-2.5 px-4 text-f1-text">Dutch</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF6600"></span><a href="spyker/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF6600">Spyker</a></td>
+<td class="py-2.5 px-4 text-f1-text">Dutch</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FF87BC"></span><a href="force_india/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FF87BC">Force India</a></td>
+<td class="py-2.5 px-4 text-f1-text">Indian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">6</td>
+<td class="py-2.5 px-4 text-center text-f1-text">11</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1098</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#FFB800"></span><a href="lotus_racing/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#FFB800">Lotus</a></td>
+<td class="py-2.5 px-4 text-f1-text">Malaysian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#968C6D"></span><a href="hrt/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#968C6D">HRT</a></td>
+<td class="py-2.5 px-4 text-f1-text">Spanish</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#CC0000"></span><a href="virgin/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#CC0000">Virgin</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#CC0000"></span><a href="marussia/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#CC0000">Marussia</a></td>
+<td class="py-2.5 px-4 text-f1-text">Russian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#006633"></span><a href="caterham/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#006633">Caterham</a></td>
+<td class="py-2.5 px-4 text-f1-text">Malaysian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#CC0000"></span><a href="manor/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#CC0000">Manor Marussia</a></td>
+<td class="py-2.5 px-4 text-f1-text">British</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#B6BABD"></span><a href="haas/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#B6BABD">Haas F1 Team</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">11</td>
+<td class="py-2.5 px-4 text-center text-f1-text">386</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#6692FF"></span><a href="rb/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#6692FF">RB F1 Team</a></td>
+<td class="py-2.5 px-4 text-f1-text">Italian</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">3</td>
+<td class="py-2.5 px-4 text-center text-f1-text">166</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="audi/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Audi</a></td>
+<td class="py-2.5 px-4 text-f1-text">German</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">2</td></tr><tr class="border-b border-f1-border">
+<td class="py-2.5 px-4"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:#555566"></span><a href="cadillac/index.html" class="font-medium hover:text-f1-white transition-colors" style="color:#555566">Cadillac F1 Team</a></td>
+<td class="py-2.5 px-4 text-f1-text">American</td>
+<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center">0</td>
+<td class="py-2.5 px-4 text-center text-f1-text">1</td>
+<td class="py-2.5 px-4 text-center text-f1-text">0</td></tr></tbody></table></div></section></main>
+<footer class="border-t border-f1-border mt-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+<div class="grid md:grid-cols-4 gap-8 mb-8">
+<div><a href="../index.html" class="flex items-center gap-2 mb-4"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
+<span class="font-heading font-bold text-lg"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
+<p class="text-f1-text text-sm">The most comprehensive Formula 1 statistics database.</p></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">Explore</h4>
+<div class="space-y-2 text-sm">
+<a href="../seasons/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Seasons</a>
+<a href="../drivers/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<a href="../constructors/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Teams</a>
+<a href="../circuits/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Circuits</a></div></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">Data</h4>
+<div class="space-y-2 text-sm">
+<span class="block text-f1-text">Powered by Jolpica F1 API</span>
+<span class="block text-f1-text">Ergast Compatible</span></div></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">About</h4>
+<p class="text-f1-text text-sm">Data sourced from the Jolpica F1 API (Ergast compatible). Not affiliated with Formula 1, FIA, or any team.</p></div>
+</div>
+<div class="border-t border-f1-border pt-6 text-center text-f1-text text-sm">&copy; 2025 PitlaneStats.com</div>
+</div></footer>
+</body></html>
