@@ -1,0 +1,28 @@
+# PitlaneStats
+
+> The most comprehensive Formula 1 statistics database on the web.
+
+PitlaneStats covers the complete history of Formula 1 from 1950 to 2026, including every driver, constructor, race, circuit, and season.
+
+## Key Facts
+
+- 818 drivers profiled with career statistics
+- 1,156 races documented with full results
+- 205 constructors/teams tracked
+- 78 circuits worldwide
+- 77 seasons from 1950 to 2026
+- Data sourced from the Jolpica F1 API (Ergast compatible)
+
+## Sections
+
+- [Seasons](https://pitlanestats.com/seasons/index.html): Championship seasons from 1950 to 2026, including race calendars, standings, and results
+- [Drivers](https://pitlanestats.com/drivers/index.html): Career profiles for every F1 driver, including wins, podiums, poles, and championship results
+- [Teams](https://pitlanestats.com/constructors/index.html): Constructor profiles with championship history and race results
+- [Circuits](https://pitlanestats.com/circuits/index.html): Track information for every Grand Prix venue
+- [Sitemap](https://pitlanestats.com/sitemap.xml): Full XML sitemap of all 2,340 pages
+
+## Notes
+
+- This is a static site hosted on GitHub Pages
+- Not affiliated with Formula 1, FIA, or any team
+- Data is factual and statistical in nature
