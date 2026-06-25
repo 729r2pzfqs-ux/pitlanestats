@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F1 Drivers by Nationality | PitlaneStats</title>
+<meta name="description" content="Explore Formula 1 drivers grouped by 40 nationalities. See champions, wins, and complete statistics per country.">
+<link rel="canonical" href="https://pitlanestats.com/drivers/nationality/">
+<meta property="og:title" content="F1 Drivers by Nationality | PitlaneStats">
+<meta property="og:description" content="Explore Formula 1 drivers grouped by 40 nationalities. See champions, wins, and complete statistics per country.">
+<meta property="og:url" content="https://pitlanestats.com/drivers/nationality/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PitlaneStats">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'f1-red': '#E10600',
+        'f1-dark': '#111118',
+        'f1-card': '#1A1A26',
+        'f1-border': '#252535',
+        'f1-text': '#8E8EA0',
+        'f1-white': '#EEEEF0',
+      },
+      fontFamily: {
+        heading: ['"Space Grotesk"', 'sans-serif'],
+        body: ['"Inter"', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', sans-serif; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker-scroll { animation: ticker 90s linear infinite; }
+.ticker-scroll:hover { animation-play-state: paused; }
+tr:hover td { background: rgba(225,6,0,0.04); }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LC281GEXHD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LC281GEXHD');
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1a1a2e">
+<meta property="og:image" content="https://pitlanestats.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pitlanestats.com/og-image.png">
+</head><body class="bg-f1-dark text-f1-white min-h-screen font-body">
+<header class="sticky top-0 z-50 bg-f1-dark/95 backdrop-blur-sm border-b border-f1-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+<a href="../../index.html" class="flex items-center gap-3"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
+<span class="font-heading font-bold text-xl tracking-tight"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a href="../../seasons/index.html" class="text-f1-text hover:text-f1-white transition-colors">Seasons</a>
+<a href="../../drivers/index.html" class="text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<a href="../../constructors/index.html" class="text-f1-text hover:text-f1-white transition-colors">Teams</a>
+<a href="../../circuits/index.html" class="text-f1-text hover:text-f1-white transition-colors">Circuits</a>
+<a href="../../records/index.html" class="text-f1-text hover:text-f1-white transition-colors">Records</a>
+<a href="../../head-to-head/index.html" class="text-f1-text hover:text-f1-white transition-colors">H2H</a>
+</nav>
+<button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="md:hidden text-f1-text">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+</div>
+<div id="mob-nav" class="hidden md:hidden border-t border-f1-border px-4 py-3 space-y-2">
+<a href="../../seasons/index.html" class="block text-f1-text hover:text-f1-white py-1">Seasons</a>
+<a href="../../drivers/index.html" class="block text-f1-text hover:text-f1-white py-1">Drivers</a>
+<a href="../../constructors/index.html" class="block text-f1-text hover:text-f1-white py-1">Teams</a>
+<a href="../../circuits/index.html" class="block text-f1-text hover:text-f1-white py-1">Circuits</a>
+<a href="../../records/index.html" class="block text-f1-text hover:text-f1-white py-1">Records</a>
+<a href="../../head-to-head/index.html" class="block text-f1-text hover:text-f1-white py-1">H2H</a>
+</div></header>
+<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 sm:px-6 py-3 text-sm">
+<a href="../../index.html" class="text-f1-text hover:text-f1-white transition-colors">Home</a>
+<span class="text-f1-border mx-2">/</span>
+<a href="../../drivers/index.html" class="text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<span class="text-f1-border mx-2">/</span>
+<span class="text-f1-white">By Nationality</span></nav>
+<main><section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+<div><h1 class="font-heading text-4xl font-bold mb-2">Drivers by Nationality</h1>
+<p class="text-f1-text">40 countries have produced Formula 1 drivers.</p></div>
+<input type="text" id="nsearch" placeholder="Search countries..." class="bg-f1-card border border-f1-border rounded-lg px-4 py-2.5 text-f1-white text-sm w-full sm:w-72 placeholder-f1-text">
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="ngrid">
+<a href="british/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="united kingdom british">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇬🇧</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">United Kingdom</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">156</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">21</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">328</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">810</div></div>
+</div></a>
+<a href="american/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="united states american">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇺🇸</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">United States</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">155</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">2</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">33</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">129</div></div>
+</div></a>
+<a href="italian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="italy italian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇮🇹</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Italy</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">88</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">4</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">48</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">216</div></div>
+</div></a>
+<a href="french/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="france french">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇫🇷</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">France</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">73</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">4</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">81</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">315</div></div>
+</div></a>
+<a href="german/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="germany german">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇩🇪</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Germany</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">47</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">12</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">179</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">416</div></div>
+</div></a>
+<a href="brazilian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="brazil brazilian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇧🇷</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Brazil</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">33</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">8</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">101</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">293</div></div>
+</div></a>
+<a href="argentine/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="argentina argentine">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇦🇷</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Argentina</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">25</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">5</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">38</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">98</div></div>
+</div></a>
+<a href="swiss/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="switzerland swiss">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇨🇭</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Switzerland</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">23</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">7</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">36</div></div>
+</div></a>
+<a href="south-african/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="south africa south african">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇿🇦</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">South Africa</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">22</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">1</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">10</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">36</div></div>
+</div></a>
+<a href="belgian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="belgium belgian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇧🇪</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Belgium</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">21</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">11</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">45</div></div>
+</div></a>
+<a href="japanese/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="japan japanese">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇯🇵</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Japan</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">19</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">3</div></div>
+</div></a>
+<a href="dutch/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="netherlands dutch">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇳🇱</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Netherlands</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">18</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">4</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">71</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">130</div></div>
+</div></a>
+<a href="australian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="australia australian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇦🇺</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Australia</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">16</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">4</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">52</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">158</div></div>
+</div></a>
+<a href="austrian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="austria austrian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇦🇹</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Austria</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">15</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">4</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">41</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">118</div></div>
+</div></a>
+<a href="spanish/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="spain spanish">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇪🇸</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Spain</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">14</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">2</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">36</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">137</div></div>
+</div></a>
+<a href="canadian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="canada canadian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇨🇦</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Canada</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">13</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">1</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">17</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">39</div></div>
+</div></a>
+<a href="swedish/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="sweden swedish">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇸🇪</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Sweden</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">10</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">12</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">44</div></div>
+</div></a>
+<a href="new-zealander/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="new zealand new zealander">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇳🇿</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">New Zealand</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">10</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">1</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">12</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">71</div></div>
+</div></a>
+<a href="finnish/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="finland finnish">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇫🇮</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Finland</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">8</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-red">4</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">57</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">245</div></div>
+</div></a>
+<a href="mexican/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="mexico mexican">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇲🇽</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Mexico</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">6</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">8</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">46</div></div>
+</div></a>
+<a href="irish/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="ireland irish">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇮🇪</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Ireland</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">4</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">0</div></div>
+</div></a>
+<a href="uruguayan/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="uruguay uruguayan">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇺🇾</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Uruguay</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">4</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">0</div></div>
+</div></a>
+<a href="danish/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="denmark danish">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇩🇰</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Denmark</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">4</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">1</div></div>
+</div></a>
+<a href="russian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="russia russian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇷🇺</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Russia</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">4</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">4</div></div>
+</div></a>
+<a href="monegasque/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="monaco monegasque">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇲🇨</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Monaco</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">3</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">8</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">53</div></div>
+</div></a>
+<a href="colombian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="colombia colombian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇨🇴</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Colombia</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">3</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">7</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">30</div></div>
+</div></a>
+<a href="venezuelan/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="venezuela venezuelan">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇻🇪</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Venezuela</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">3</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">1</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">1</div></div>
+</div></a>
+<a href="east-german/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="east germany east german">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇩🇪</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">East Germany</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">3</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">0</div></div>
+</div></a>
+<a href="portuguese/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="portugal portuguese">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇵🇹</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Portugal</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">3</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">1</div></div>
+</div></a>
+<a href="rhodesian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="rhodesia rhodesian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇿🇼</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Rhodesia</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">3</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">1</div></div>
+</div></a>
+<a href="thai/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="thailand thai">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇹🇭</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Thailand</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">2</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">2</div></div>
+</div></a>
+<a href="indian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="india indian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇮🇳</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">India</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">2</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">0</div></div>
+</div></a>
+<a href="polish/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="poland polish">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇵🇱</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Poland</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">1</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">1</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">12</div></div>
+</div></a>
+<a href="liechtensteiner/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="liechtenstein liechtensteiner">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇱🇮</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Liechtenstein</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">1</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">0</div></div>
+</div></a>
+<a href="chilean/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="chile chilean">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇨🇱</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Chile</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">1</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">0</div></div>
+</div></a>
+<a href="czech/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="czech republic czech">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇨🇿</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Czech Republic</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">1</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">0</div></div>
+</div></a>
+<a href="malaysian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="malaysia malaysian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇲🇾</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Malaysia</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">1</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">0</div></div>
+</div></a>
+<a href="hungarian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="hungary hungarian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇭🇺</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Hungary</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">1</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">0</div></div>
+</div></a>
+<a href="indonesian/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="indonesia indonesian">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇮🇩</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">Indonesia</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">1</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">0</div></div>
+</div></a>
+<a href="chinese/index.html" class="bg-f1-card border border-f1-border rounded-xl p-5 hover:border-f1-red transition-colors group" data-name="china chinese">
+<div class="flex items-center gap-3 mb-3">
+<span class="text-3xl">🇨🇳</span>
+<h3 class="font-heading font-semibold text-lg text-f1-white group-hover:text-f1-red transition-colors">China</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div><span class="text-f1-text">Drivers</span><div class="font-heading font-bold text-f1-white">1</div></div>
+<div><span class="text-f1-text">Champions</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Race Wins</span><div class="font-heading font-bold text-f1-white">0</div></div>
+<div><span class="text-f1-text">Podiums</span><div class="font-heading font-bold text-f1-white">0</div></div>
+</div></a>
+</div></section>
+<script>
+document.getElementById('nsearch').addEventListener('input', function(){
+  var q = this.value.toLowerCase();
+  document.querySelectorAll('#ngrid > a').forEach(function(card){
+    card.style.display = card.dataset.name.includes(q) ? '' : 'none';
+  });
+});
+</script></main><footer class="border-t border-f1-border mt-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+<div class="grid md:grid-cols-4 gap-8 mb-8">
+<div><a href="../../index.html" class="flex items-center gap-2 mb-4"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
+<span class="font-heading font-bold text-lg"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
+<p class="text-f1-text text-sm">The most comprehensive Formula 1 statistics database.</p></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">Explore</h4>
+<div class="space-y-2 text-sm">
+<a href="../../seasons/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Seasons</a>
+<a href="../../drivers/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<a href="../../constructors/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Teams</a>
+<a href="../../circuits/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Circuits</a></div></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">Data</h4>
+<div class="space-y-2 text-sm">
+<span class="block text-f1-text">Powered by Jolpica F1 API</span>
+<span class="block text-f1-text">Ergast Compatible</span></div></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">About</h4>
+<div class="space-y-2 text-sm">
+<a href="../../about/index.html" class="block text-f1-text hover:text-f1-white transition-colors">About PitlaneStats</a>
+<a href="../../privacy/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Privacy Policy</a>
+<a href="mailto:info@pitlanestats.com" class="block text-f1-text hover:text-f1-white transition-colors">Contact</a></div></div>
+</div>
+<div class="border-t border-f1-border pt-6 text-center text-f1-text text-sm">
+<p class="mb-2">Data sourced from the Jolpica F1 API. Not affiliated with Formula 1, FIA, or any team.</p>
+<p>&copy; 2025 PitlaneStats.com</p></div>
+</div></footer>
+</body></html>
