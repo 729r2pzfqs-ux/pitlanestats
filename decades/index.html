@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F1 by Decade | PitlaneStats</title>
+<meta name="description" content="Explore the history of Formula 1 through every decade from the 1950s to the 2020s. Champions, records, and key moments from each era.">
+<link rel="canonical" href="https://pitlanestats.com/decades/">
+<meta property="og:title" content="F1 by Decade | PitlaneStats">
+<meta property="og:description" content="Explore the history of Formula 1 through every decade from the 1950s to the 2020s. Champions, records, and key moments from each era.">
+<meta property="og:url" content="https://pitlanestats.com/decades/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PitlaneStats">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'f1-red': '#E10600',
+        'f1-dark': '#111118',
+        'f1-card': '#1A1A26',
+        'f1-border': '#252535',
+        'f1-text': '#8E8EA0',
+        'f1-white': '#EEEEF0',
+      },
+      fontFamily: {
+        heading: ['"Space Grotesk"', 'sans-serif'],
+        body: ['"Inter"', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', sans-serif; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker-scroll { animation: ticker 90s linear infinite; }
+.ticker-scroll:hover { animation-play-state: paused; }
+tr:hover td { background: rgba(225,6,0,0.04); }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LC281GEXHD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LC281GEXHD');
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1a1a2e">
+<meta property="og:image" content="https://pitlanestats.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pitlanestats.com/og-image.png">
+</head><body class="bg-f1-dark text-f1-white min-h-screen font-body">
+<header class="sticky top-0 z-50 bg-f1-dark/95 backdrop-blur-sm border-b border-f1-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+<a href="../index.html" class="flex items-center gap-3"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
+<span class="font-heading font-bold text-xl tracking-tight"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a href="../seasons/index.html" class="text-f1-text hover:text-f1-white transition-colors">Seasons</a>
+<a href="../drivers/index.html" class="text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<a href="../constructors/index.html" class="text-f1-text hover:text-f1-white transition-colors">Teams</a>
+<a href="../circuits/index.html" class="text-f1-text hover:text-f1-white transition-colors">Circuits</a>
+<a href="../records/index.html" class="text-f1-text hover:text-f1-white transition-colors">Records</a>
+<a href="../head-to-head/index.html" class="text-f1-text hover:text-f1-white transition-colors">H2H</a>
+</nav>
+<button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="md:hidden text-f1-text">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+</div>
+<div id="mob-nav" class="hidden md:hidden border-t border-f1-border px-4 py-3 space-y-2">
+<a href="../seasons/index.html" class="block text-f1-text hover:text-f1-white py-1">Seasons</a>
+<a href="../drivers/index.html" class="block text-f1-text hover:text-f1-white py-1">Drivers</a>
+<a href="../constructors/index.html" class="block text-f1-text hover:text-f1-white py-1">Teams</a>
+<a href="../circuits/index.html" class="block text-f1-text hover:text-f1-white py-1">Circuits</a>
+<a href="../records/index.html" class="block text-f1-text hover:text-f1-white py-1">Records</a>
+<a href="../head-to-head/index.html" class="block text-f1-text hover:text-f1-white py-1">H2H</a>
+</div></header>
+<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 sm:px-6 py-3 text-sm">
+<a href="../index.html" class="text-f1-text hover:text-f1-white transition-colors">Home</a>
+<span class="text-f1-border mx-2">/</span>
+<span class="text-f1-white">Decades</span></nav>
+<main><section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+<h1 class="font-heading text-4xl font-bold mb-2">F1 Through the Decades</h1>
+<p class="text-f1-text text-lg mb-10">Seven decades of speed, innovation, and drama.</p>
+
+<div class="space-y-6">
+<a href="1950s/index.html" class="block bg-f1-card border border-f1-border rounded-xl p-6 hover:border-f1-red transition-colors group">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+<div>
+<h2 class="font-heading text-3xl font-bold text-f1-white group-hover:text-f1-red transition-colors">1950s</h2>
+<p class="text-f1-red font-heading font-semibold">The Pioneer Era</p>
+</div>
+<div class="flex gap-6 text-sm">
+<div class="text-center"><div class="text-f1-text">Races</div><div class="font-heading font-bold text-xl text-f1-white">84</div></div>
+<div class="text-center"><div class="text-f1-text">Winners</div><div class="font-heading font-bold text-xl text-f1-white">24</div></div>
+<div class="text-center"><div class="text-f1-text">Champions</div><div class="font-heading font-bold text-xl text-f1-red">5</div></div>
+</div></div>
+<p class="text-f1-text text-sm line-clamp-2">Formula 1 began on 13 May 1950 at Silverstone, and for the first decade the championship was fought on converted airfields, through village streets, and around road circuits that would terrify modern ...</p>
+<div class="mt-3 text-sm text-f1-text">Champions: Nino Farina, Juan Fangio, Alberto Ascari, Mike Hawthorn, Jack Brabham</div>
+</a>
+<a href="1960s/index.html" class="block bg-f1-card border border-f1-border rounded-xl p-6 hover:border-f1-red transition-colors group">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+<div>
+<h2 class="font-heading text-3xl font-bold text-f1-white group-hover:text-f1-red transition-colors">1960s</h2>
+<p class="text-f1-red font-heading font-semibold">The Rear-Engine Revolution</p>
+</div>
+<div class="flex gap-6 text-sm">
+<div class="text-center"><div class="text-f1-text">Races</div><div class="font-heading font-bold text-xl text-f1-white">100</div></div>
+<div class="text-center"><div class="text-f1-text">Winners</div><div class="font-heading font-bold text-xl text-f1-white">21</div></div>
+<div class="text-center"><div class="text-f1-text">Champions</div><div class="font-heading font-bold text-xl text-f1-red">7</div></div>
+</div></div>
+<p class="text-f1-text text-sm line-clamp-2">The 1960s transformed Formula 1 from a sport of gentleman drivers into a professional endeavour, though it remained lethally dangerous throughout. Cooper's rear-engined cars had proved the concept in ...</p>
+<div class="mt-3 text-sm text-f1-text">Champions: Jack Brabham, Phil Hill, Graham Hill, Jim Clark, John Surtees...</div>
+</a>
+<a href="1970s/index.html" class="block bg-f1-card border border-f1-border rounded-xl p-6 hover:border-f1-red transition-colors group">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+<div>
+<h2 class="font-heading text-3xl font-bold text-f1-white group-hover:text-f1-red transition-colors">1970s</h2>
+<p class="text-f1-red font-heading font-semibold">Speed, Danger, and Ground Effect</p>
+</div>
+<div class="flex gap-6 text-sm">
+<div class="text-center"><div class="text-f1-text">Races</div><div class="font-heading font-bold text-xl text-f1-white">144</div></div>
+<div class="text-center"><div class="text-f1-text">Winners</div><div class="font-heading font-bold text-xl text-f1-white">29</div></div>
+<div class="text-center"><div class="text-f1-text">Champions</div><div class="font-heading font-bold text-xl text-f1-red">7</div></div>
+</div></div>
+<p class="text-f1-text text-sm line-clamp-2">The 1970s were the decade of extremes in Formula 1. On one hand, the sport grew in commercial stature under the influence of Bernie Ecclestone, who transformed the Constructors' Association into a pow...</p>
+<div class="mt-3 text-sm text-f1-text">Champions: Jochen Rindt, Jackie Stewart, Emerson Fittipaldi, Niki Lauda, James Hunt...</div>
+</a>
+<a href="1980s/index.html" class="block bg-f1-card border border-f1-border rounded-xl p-6 hover:border-f1-red transition-colors group">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+<div>
+<h2 class="font-heading text-3xl font-bold text-f1-white group-hover:text-f1-red transition-colors">1980s</h2>
+<p class="text-f1-red font-heading font-semibold">The Turbo Era</p>
+</div>
+<div class="flex gap-6 text-sm">
+<div class="text-center"><div class="text-f1-text">Races</div><div class="font-heading font-bold text-xl text-f1-white">156</div></div>
+<div class="text-center"><div class="text-f1-text">Winners</div><div class="font-heading font-bold text-xl text-f1-white">21</div></div>
+<div class="text-center"><div class="text-f1-text">Champions</div><div class="font-heading font-bold text-xl text-f1-red">6</div></div>
+</div></div>
+<p class="text-f1-text text-sm line-clamp-2">The 1980s were defined by the turbo revolution and some of the most intense rivalries the sport has ever seen. Renault had introduced turbocharging in 1977, but it was the 1980s when turbos became ess...</p>
+<div class="mt-3 text-sm text-f1-text">Champions: Alan Jones, Nelson Piquet, Keke Rosberg, Niki Lauda, Alain Prost...</div>
+</a>
+<a href="1990s/index.html" class="block bg-f1-card border border-f1-border rounded-xl p-6 hover:border-f1-red transition-colors group">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+<div>
+<h2 class="font-heading text-3xl font-bold text-f1-white group-hover:text-f1-red transition-colors">1990s</h2>
+<p class="text-f1-red font-heading font-semibold">Technology Wars and Tragedy</p>
+</div>
+<div class="flex gap-6 text-sm">
+<div class="text-center"><div class="text-f1-text">Races</div><div class="font-heading font-bold text-xl text-f1-white">162</div></div>
+<div class="text-center"><div class="text-f1-text">Winners</div><div class="font-heading font-bold text-xl text-f1-white">17</div></div>
+<div class="text-center"><div class="text-f1-text">Champions</div><div class="font-heading font-bold text-xl text-f1-red">7</div></div>
+</div></div>
+<p class="text-f1-text text-sm line-clamp-2">The 1990s began under the shadow of Ayrton Senna and Alain Prost's continuing rivalry and ended with Michael Schumacher establishing a new dynasty. The decade's defining moment was the darkest weekend...</p>
+<div class="mt-3 text-sm text-f1-text">Champions: Ayrton Senna, Nigel Mansell, Alain Prost, Michael Schumacher, Damon Hill...</div>
+</a>
+<a href="2000s/index.html" class="block bg-f1-card border border-f1-border rounded-xl p-6 hover:border-f1-red transition-colors group">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+<div>
+<h2 class="font-heading text-3xl font-bold text-f1-white group-hover:text-f1-red transition-colors">2000s</h2>
+<p class="text-f1-red font-heading font-semibold">The Schumacher Dynasty and Beyond</p>
+</div>
+<div class="flex gap-6 text-sm">
+<div class="text-center"><div class="text-f1-text">Races</div><div class="font-heading font-bold text-xl text-f1-white">174</div></div>
+<div class="text-center"><div class="text-f1-text">Winners</div><div class="font-heading font-bold text-xl text-f1-white">17</div></div>
+<div class="text-center"><div class="text-f1-text">Champions</div><div class="font-heading font-bold text-xl text-f1-red">5</div></div>
+</div></div>
+<p class="text-f1-text text-sm line-clamp-2">The 2000s were the decade of Michael Schumacher and Ferrari's absolute dominance, followed by a dramatic power shift. From 2000 to 2004, Schumacher won five consecutive championships with Ferrari, rew...</p>
+<div class="mt-3 text-sm text-f1-text">Champions: Michael Schumacher, Fernando Alonso, Kimi Räikkönen, Lewis Hamilton, Jenson Button</div>
+</a>
+<a href="2010s/index.html" class="block bg-f1-card border border-f1-border rounded-xl p-6 hover:border-f1-red transition-colors group">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+<div>
+<h2 class="font-heading text-3xl font-bold text-f1-white group-hover:text-f1-red transition-colors">2010s</h2>
+<p class="text-f1-red font-heading font-semibold">The Hybrid Revolution</p>
+</div>
+<div class="flex gap-6 text-sm">
+<div class="text-center"><div class="text-f1-text">Races</div><div class="font-heading font-bold text-xl text-f1-white">198</div></div>
+<div class="text-center"><div class="text-f1-text">Winners</div><div class="font-heading font-bold text-xl text-f1-white">12</div></div>
+<div class="text-center"><div class="text-f1-text">Champions</div><div class="font-heading font-bold text-xl text-f1-red">3</div></div>
+</div></div>
+<p class="text-f1-text text-sm line-clamp-2">The 2010s began with a thrilling four-way title fight and ended with Mercedes rewriting the record books. Sebastian Vettel's four consecutive championships with Red Bull (2010-2013), backed by Adrian ...</p>
+<div class="mt-3 text-sm text-f1-text">Champions: Sebastian Vettel, Lewis Hamilton, Nico Rosberg</div>
+</a>
+<a href="2020s/index.html" class="block bg-f1-card border border-f1-border rounded-xl p-6 hover:border-f1-red transition-colors group">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+<div>
+<h2 class="font-heading text-3xl font-bold text-f1-white group-hover:text-f1-red transition-colors">2020s</h2>
+<p class="text-f1-red font-heading font-semibold">New Rules, New Rivalries</p>
+</div>
+<div class="flex gap-6 text-sm">
+<div class="text-center"><div class="text-f1-text">Races</div><div class="font-heading font-bold text-xl text-f1-white">131</div></div>
+<div class="text-center"><div class="text-f1-text">Winners</div><div class="font-heading font-bold text-xl text-f1-white">12</div></div>
+<div class="text-center"><div class="text-f1-text">Champions</div><div class="font-heading font-bold text-xl text-f1-red">3</div></div>
+</div></div>
+<p class="text-f1-text text-sm line-clamp-2">The 2020s ushered in the most dramatic rule changes in a generation and a rivalry for the ages. The decade opened with the COVID-disrupted 2020 season, but the real story began in 2021 when Max Versta...</p>
+<div class="mt-3 text-sm text-f1-text">Champions: Lewis Hamilton, Max Verstappen, Lando Norris</div>
+</a>
+</div></section></main><footer class="border-t border-f1-border mt-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+<div class="grid md:grid-cols-4 gap-8 mb-8">
+<div><a href="../index.html" class="flex items-center gap-2 mb-4"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
+<span class="font-heading font-bold text-lg"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
+<p class="text-f1-text text-sm">The most comprehensive Formula 1 statistics database.</p></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">Explore</h4>
+<div class="space-y-2 text-sm">
+<a href="../seasons/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Seasons</a>
+<a href="../drivers/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<a href="../constructors/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Teams</a>
+<a href="../circuits/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Circuits</a></div></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">Data</h4>
+<div class="space-y-2 text-sm">
+<span class="block text-f1-text">Powered by Jolpica F1 API</span>
+<span class="block text-f1-text">Ergast Compatible</span></div></div>
+<div><h4 class="font-heading font-semibold text-f1-white mb-3">About</h4>
+<div class="space-y-2 text-sm">
+<a href="../about/index.html" class="block text-f1-text hover:text-f1-white transition-colors">About PitlaneStats</a>
+<a href="../privacy/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Privacy Policy</a>
+<a href="mailto:info@pitlanestats.com" class="block text-f1-text hover:text-f1-white transition-colors">Contact</a></div></div>
+</div>
+<div class="border-t border-f1-border pt-6 text-center text-f1-text text-sm">
+<p class="mb-2">Data sourced from the Jolpica F1 API. Not affiliated with Formula 1, FIA, or any team.</p>
+<p>&copy; 2025 PitlaneStats.com</p></div>
+</div></footer>
+</body></html>
