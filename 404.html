@@ -65,26 +65,30 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', sans-serif; }
 <body class="bg-f1-dark text-f1-white min-h-screen font-body">
 <header class="sticky top-0 z-50 bg-f1-dark/95 backdrop-blur-sm border-b border-f1-border">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-<a href="./index.html" class="flex items-center gap-3"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
+<a href="/index.html" class="flex items-center gap-3"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
 <span class="font-heading font-bold text-xl tracking-tight"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
 <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-<a href="./seasons/index.html" class="text-f1-text hover:text-f1-white transition-colors">Seasons</a>
-<a href="./drivers/index.html" class="text-f1-text hover:text-f1-white transition-colors">Drivers</a>
-<a href="./constructors/index.html" class="text-f1-text hover:text-f1-white transition-colors">Teams</a>
-<a href="./circuits/index.html" class="text-f1-text hover:text-f1-white transition-colors">Circuits</a>
-<a href="./records/index.html" class="text-f1-text hover:text-f1-white transition-colors">Records</a>
-<a href="./head-to-head/index.html" class="text-f1-text hover:text-f1-white transition-colors">H2H</a>
+<a href="/seasons/index.html" class="text-f1-text hover:text-f1-white transition-colors">Seasons</a>
+<a href="/drivers/index.html" class="text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<a href="/constructors/index.html" class="text-f1-text hover:text-f1-white transition-colors">Teams</a>
+<a href="/circuits/index.html" class="text-f1-text hover:text-f1-white transition-colors">Circuits</a>
+<a href="/decades/index.html" class="text-f1-text hover:text-f1-white transition-colors">Decades</a>
+<a href="/battles/index.html" class="text-f1-text hover:text-f1-white transition-colors">Battles</a>
+<a href="/records/index.html" class="text-f1-text hover:text-f1-white transition-colors">Records</a>
+<a href="/head-to-head/index.html" class="text-f1-text hover:text-f1-white transition-colors">H2H</a>
 </nav>
 <button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="md:hidden text-f1-text">
 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
 </div>
 <div id="mob-nav" class="hidden md:hidden border-t border-f1-border px-4 py-3 space-y-2">
-<a href="./seasons/index.html" class="block text-f1-text hover:text-f1-white py-1">Seasons</a>
-<a href="./drivers/index.html" class="block text-f1-text hover:text-f1-white py-1">Drivers</a>
-<a href="./constructors/index.html" class="block text-f1-text hover:text-f1-white py-1">Teams</a>
-<a href="./circuits/index.html" class="block text-f1-text hover:text-f1-white py-1">Circuits</a>
-<a href="./records/index.html" class="block text-f1-text hover:text-f1-white py-1">Records</a>
-<a href="./head-to-head/index.html" class="block text-f1-text hover:text-f1-white py-1">H2H</a>
+<a href="/seasons/index.html" class="block text-f1-text hover:text-f1-white py-1">Seasons</a>
+<a href="/drivers/index.html" class="block text-f1-text hover:text-f1-white py-1">Drivers</a>
+<a href="/constructors/index.html" class="block text-f1-text hover:text-f1-white py-1">Teams</a>
+<a href="/circuits/index.html" class="block text-f1-text hover:text-f1-white py-1">Circuits</a>
+<a href="/decades/index.html" class="block text-f1-text hover:text-f1-white py-1">Decades</a>
+<a href="/battles/index.html" class="block text-f1-text hover:text-f1-white py-1">Battles</a>
+<a href="/records/index.html" class="block text-f1-text hover:text-f1-white py-1">Records</a>
+<a href="/head-to-head/index.html" class="block text-f1-text hover:text-f1-white py-1">H2H</a>
 </div></header>
 
 <main>
@@ -119,35 +123,43 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', sans-serif; }
 </div>
 
 <!-- Quick links -->
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-lg mx-auto mb-12">
-<a href="./seasons/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mb-12">
+<a href="/seasons/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
 <i class="fa-solid fa-calendar text-f1-red text-xl mb-2"></i>
 <div class="text-sm font-medium text-f1-white group-hover:text-f1-red transition-colors">Seasons</div>
 </a>
-<a href="./drivers/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
+<a href="/drivers/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
 <i class="fa-solid fa-user-helmet-safety text-f1-red text-xl mb-2"></i>
 <div class="text-sm font-medium text-f1-white group-hover:text-f1-red transition-colors">Drivers</div>
 </a>
-<a href="./constructors/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
+<a href="/constructors/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
 <i class="fa-solid fa-warehouse text-f1-red text-xl mb-2"></i>
 <div class="text-sm font-medium text-f1-white group-hover:text-f1-red transition-colors">Teams</div>
 </a>
-<a href="./circuits/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
+<a href="/circuits/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
 <i class="fa-solid fa-road text-f1-red text-xl mb-2"></i>
 <div class="text-sm font-medium text-f1-white group-hover:text-f1-red transition-colors">Circuits</div>
 </a>
-<a href="./records/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
+<a href="/decades/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
+<i class="fa-solid fa-clock-rotate-left text-f1-red text-xl mb-2"></i>
+<div class="text-sm font-medium text-f1-white group-hover:text-f1-red transition-colors">Decades</div>
+</a>
+<a href="/battles/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
+<i class="fa-solid fa-bolt text-f1-red text-xl mb-2"></i>
+<div class="text-sm font-medium text-f1-white group-hover:text-f1-red transition-colors">Battles</div>
+</a>
+<a href="/records/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
 <i class="fa-solid fa-ranking-star text-f1-red text-xl mb-2"></i>
 <div class="text-sm font-medium text-f1-white group-hover:text-f1-red transition-colors">Records</div>
 </a>
-<a href="./head-to-head/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
+<a href="/head-to-head/index.html" class="bg-f1-card border border-f1-border rounded-xl p-4 hover:border-f1-red transition-colors group">
 <i class="fa-solid fa-people-arrows text-f1-red text-xl mb-2"></i>
 <div class="text-sm font-medium text-f1-white group-hover:text-f1-red transition-colors">H2H</div>
 </a>
 </div>
 
 <!-- Back to homepage CTA -->
-<a href="./index.html" class="inline-flex items-center gap-2 bg-f1-red hover:bg-red-700 text-white font-heading font-semibold px-8 py-3 rounded-lg transition-colors">
+<a href="/index.html" class="inline-flex items-center gap-2 bg-f1-red hover:bg-red-700 text-white font-heading font-semibold px-8 py-3 rounded-lg transition-colors">
 <i class="fa-solid fa-house"></i> Back to the Pit Lane
 </a>
 
@@ -157,23 +169,23 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', sans-serif; }
 <footer class="border-t border-f1-border mt-20">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
 <div class="grid md:grid-cols-4 gap-8 mb-8">
-<div><a href="./index.html" class="flex items-center gap-2 mb-4"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
+<div><a href="/index.html" class="flex items-center gap-2 mb-4"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
 <span class="font-heading font-bold text-lg"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
 <p class="text-f1-text text-sm">The most comprehensive Formula 1 statistics database.</p></div>
 <div><h4 class="font-heading font-semibold text-f1-white mb-3">Explore</h4>
 <div class="space-y-2 text-sm">
-<a href="./seasons/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Seasons</a>
-<a href="./drivers/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Drivers</a>
-<a href="./constructors/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Teams</a>
-<a href="./circuits/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Circuits</a></div></div>
+<a href="/seasons/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Seasons</a>
+<a href="/drivers/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Drivers</a>
+<a href="/constructors/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Teams</a>
+<a href="/circuits/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Circuits</a></div></div>
 <div><h4 class="font-heading font-semibold text-f1-white mb-3">Data</h4>
 <div class="space-y-2 text-sm">
 <span class="block text-f1-text">Powered by Jolpica F1 API</span>
 <span class="block text-f1-text">Ergast Compatible</span></div></div>
 <div><h4 class="font-heading font-semibold text-f1-white mb-3">About</h4>
 <div class="space-y-2 text-sm">
-<a href="./about/index.html" class="block text-f1-text hover:text-f1-white transition-colors">About PitlaneStats</a>
-<a href="./privacy/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Privacy Policy</a>
+<a href="/about/index.html" class="block text-f1-text hover:text-f1-white transition-colors">About PitlaneStats</a>
+<a href="/privacy/index.html" class="block text-f1-text hover:text-f1-white transition-colors">Privacy Policy</a>
 <a href="mailto:info@pitlanestats.com" class="block text-f1-text hover:text-f1-white transition-colors">Contact</a></div></div>
 </div>
 <div class="border-t border-f1-border pt-6 text-center text-f1-text text-sm">
@@ -184,7 +196,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', sans-serif; }
 <script>
 document.getElementById('search404').addEventListener('keydown', function(e) {
   if (e.key === 'Enter' && this.value.trim()) {
-    window.location.href = './drivers/index.html';
+    window.location.href = '/drivers/index.html';
   }
 });
 </script>
