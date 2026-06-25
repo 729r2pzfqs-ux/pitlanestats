@@ -19,6 +19,7 @@ PitlaneStats covers the complete history of Formula 1 from 1950 to 2026, includi
 - [Drivers](https://pitlanestats.com/drivers/index.html): Career profiles for every F1 driver, including wins, podiums, poles, and championship results
 - [Teams](https://pitlanestats.com/constructors/index.html): Constructor profiles with championship history and race results
 - [Circuits](https://pitlanestats.com/circuits/index.html): Track information for every Grand Prix venue
+- [Wet Weather Stats](https://pitlanestats.com/wet-weather/index.html): F1 rain race statistics — most wet-weather wins, best wet win percentage, wet-weather specialists, and the most dramatic rain races in F1 history
 - [Sitemap](https://pitlanestats.com/sitemap.xml): Full XML sitemap of all 2,340 pages
 
 ## Notes
