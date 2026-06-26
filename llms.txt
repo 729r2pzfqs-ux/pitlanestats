@@ -20,6 +20,7 @@ PitlaneStats covers the complete history of Formula 1 from 1950 to 2026, includi
 - [Teams](https://pitlanestats.com/constructors/index.html): Constructor profiles with championship history and race results
 - [Circuits](https://pitlanestats.com/circuits/index.html): Track information for every Grand Prix venue
 - [Wet Weather Stats](https://pitlanestats.com/wet-weather/index.html): F1 rain race statistics — most wet-weather wins, best wet win percentage, wet-weather specialists, and the most dramatic rain races in F1 history
+- [Points System History](https://pitlanestats.com/points-history/index.html): The complete history of the F1 points system from 1950 to today — every scoring change, fastest-lap and sprint points, dropped scores, and the championships that would have had different winners under different systems
 - [Sitemap](https://pitlanestats.com/sitemap.xml): Full XML sitemap of all 2,340 pages
 
 ## Notes
