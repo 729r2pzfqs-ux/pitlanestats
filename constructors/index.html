@@ -71,7 +71,7 @@ tr:hover td { background: rgba(225,6,0,0.04); }
 <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
 <a href="../" class="flex items-center gap-3"><svg width="36" height="28" viewBox="0 0 36 28" fill="none"><path d="M0 4C0 1.79 1.79 0 4 0h6l-3 28H4c-2.21 0-4-1.79-4-4V4z" fill="#E10600"/><path d="M12 0h6l-3 28h-6L12 0z" fill="#E10600" opacity="0.7"/><path d="M20 0h6l-3 28h-6L20 0z" fill="#E10600" opacity="0.4"/><rect x="28" y="10" width="8" height="8" rx="4" fill="#E10600"/></svg>
 <span class="font-heading font-bold text-xl tracking-tight"><span class="text-f1-white">PITLANE</span><span class="text-f1-red">STATS</span></span></a>
-<nav class="hidden md:flex items-center gap-4 text-xs font-medium">
+<nav class="hidden xl:flex items-center gap-x-3 text-xs font-medium whitespace-nowrap">
 <a href="../on-this-day/" class="text-f1-text hover:text-f1-white transition-colors">On This Day</a><a href="../seasons/" class="text-f1-text hover:text-f1-white transition-colors">Seasons</a>
 <a href="../drivers/" class="text-f1-text hover:text-f1-white transition-colors">Drivers</a>
 <a href="../constructors/" class="text-f1-red hover:text-f1-white transition-colors">Teams</a>
@@ -86,9 +86,9 @@ tr:hover td { background: rgba(225,6,0,0.04); }
 <a href="../calendar/" class="text-f1-text hover:text-f1-white transition-colors">Calendar</a>
 <button id="pls-search-btn" type="button" onclick="PLS_openSearch()" aria-label="Search (press /)" title="Search (/)" class="text-f1-text hover:text-f1-red transition-colors flex items-center"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
 </nav>
-<div class="flex md:hidden items-center gap-3"><button type="button" onclick="PLS_openSearch()" aria-label="Search" class="text-f1-text hover:text-f1-red transition-colors"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button><button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="text-f1-text"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+<div class="flex xl:hidden items-center gap-3"><button type="button" onclick="PLS_openSearch()" aria-label="Search" class="text-f1-text hover:text-f1-red transition-colors"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button><button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="text-f1-text"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
 </div>
-<div id="mob-nav" class="hidden md:hidden border-t border-f1-border px-4 py-3 space-y-2">
+<div id="mob-nav" class="hidden xl:hidden border-t border-f1-border px-4 py-3 space-y-2">
 <a href="../on-this-day/" class="block text-f1-text hover:text-f1-white py-1">On This Day</a><a href="../seasons/" class="block text-f1-text hover:text-f1-white py-1">Seasons</a>
 <a href="../drivers/" class="block text-f1-text hover:text-f1-white py-1">Drivers</a>
 <a href="../constructors/" class="block text-f1-red hover:text-f1-white py-1">Teams</a>
