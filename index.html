@@ -84,9 +84,9 @@ tr:hover td { background: rgba(225,6,0,0.04); }
 <a href="./rookie-seasons/" class="text-f1-text hover:text-f1-white transition-colors">Rookies</a>
 <a href="./head-to-head/" class="text-f1-text hover:text-f1-white transition-colors">H2H</a>
 <a href="./calendar/" class="text-f1-text hover:text-f1-white transition-colors">Calendar</a>
+<button id="pls-search-btn" type="button" onclick="PLS_openSearch()" aria-label="Search (press /)" title="Search (/)" class="text-f1-text hover:text-f1-red transition-colors flex items-center"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
 </nav>
-<button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="md:hidden text-f1-text">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+<div class="flex md:hidden items-center gap-3"><button type="button" onclick="PLS_openSearch()" aria-label="Search" class="text-f1-text hover:text-f1-red transition-colors"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button><button onclick="document.getElementById('mob-nav').classList.toggle('hidden')" class="text-f1-text"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
 </div>
 <div id="mob-nav" class="hidden md:hidden border-t border-f1-border px-4 py-3 space-y-2">
 <a href="./on-this-day/" class="block text-f1-text hover:text-f1-white py-1">On This Day</a><a href="./seasons/" class="block text-f1-text hover:text-f1-white py-1">Seasons</a>
@@ -104,6 +104,44 @@ tr:hover td { background: rgba(225,6,0,0.04); }
 </div></header>
 
 <main>
+<!-- Next Race Countdown Banner -->
+<section class="border-b border-f1-border bg-gradient-to-b from-f1-card to-f1-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-7">
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+<div class="flex items-stretch gap-4">
+<div class="checkered w-1.5 rounded-full hidden sm:block"></div>
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-f1-red opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-f1-red"></span></span>
+<span id="rc-label" class="text-f1-red font-heading font-semibold text-xs tracking-widest uppercase">Next Race</span>
+</div>
+<h2 id="rc-name" class="font-heading text-2xl sm:text-3xl font-bold leading-tight">Loading…</h2>
+<p class="text-f1-text text-sm mt-1.5"><span id="rc-flag" class="text-base align-middle"></span> <span id="rc-circuit"></span> <span id="rc-date" class="text-f1-white/80"></span></p>
+</div></div>
+<!-- countdown timer -->
+<div id="rc-timer" class="flex items-center gap-2 sm:gap-3">
+<div class="flex flex-col items-center bg-f1-card border border-f1-border rounded-lg px-3 sm:px-5 py-2.5 min-w-[58px] sm:min-w-[78px]">
+<span id="cd-days" class="font-heading text-2xl sm:text-4xl font-bold text-f1-white tabular-nums leading-none">--</span>
+<span class="text-f1-text text-[10px] sm:text-xs uppercase tracking-wider mt-1.5">Days</span></div>
+<span class="text-f1-red font-heading text-2xl sm:text-3xl font-bold leading-none -mt-3 sm:-mt-4">:</span>
+<div class="flex flex-col items-center bg-f1-card border border-f1-border rounded-lg px-3 sm:px-5 py-2.5 min-w-[58px] sm:min-w-[78px]">
+<span id="cd-hours" class="font-heading text-2xl sm:text-4xl font-bold text-f1-white tabular-nums leading-none">--</span>
+<span class="text-f1-text text-[10px] sm:text-xs uppercase tracking-wider mt-1.5">Hours</span></div>
+<span class="text-f1-red font-heading text-2xl sm:text-3xl font-bold leading-none -mt-3 sm:-mt-4">:</span>
+<div class="flex flex-col items-center bg-f1-card border border-f1-border rounded-lg px-3 sm:px-5 py-2.5 min-w-[58px] sm:min-w-[78px]">
+<span id="cd-mins" class="font-heading text-2xl sm:text-4xl font-bold text-f1-white tabular-nums leading-none">--</span>
+<span class="text-f1-text text-[10px] sm:text-xs uppercase tracking-wider mt-1.5">Mins</span></div>
+<span class="text-f1-red font-heading text-2xl sm:text-3xl font-bold leading-none -mt-3 sm:-mt-4">:</span>
+<div class="flex flex-col items-center bg-f1-card border border-f1-border rounded-lg px-3 sm:px-5 py-2.5 min-w-[58px] sm:min-w-[78px]">
+<span id="cd-secs" class="font-heading text-2xl sm:text-4xl font-bold text-f1-red tabular-nums leading-none">--</span>
+<span class="text-f1-text text-[10px] sm:text-xs uppercase tracking-wider mt-1.5">Secs</span></div>
+</div>
+<!-- live / race-day / concluded status (hidden by default) -->
+<div id="rc-status" class="hidden"></div>
+</div></div></section>
+
 <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
 <div class="grid md:grid-cols-5 gap-12 items-center">
 <div class="md:col-span-3">
@@ -336,4 +374,112 @@ tr:hover td { background: rgba(225,6,0,0.04); }
 <p class="mb-2">Data sourced from the Jolpica F1 API. Not affiliated with Formula 1, FIA, or any team.</p>
 <p>&copy; 2025 PitlaneStats.com</p></div>
 </div></footer>
+<script>
+(function(){
+  // Verified 2025 F1 calendar. start = Friday (weekend opens), race = Sunday race start (local time).
+  var RACES = [
+    {name:"Australian Grand Prix",      circuit:"Albert Park Circuit",   loc:"Melbourne",      flag:"🇦🇺", start:"2025-03-14T00:00", race:"2025-03-16T15:00"},
+    {name:"Chinese Grand Prix",         circuit:"Shanghai Int'l Circuit", loc:"Shanghai",       flag:"🇨🇳", start:"2025-03-21T00:00", race:"2025-03-23T15:00"},
+    {name:"Japanese Grand Prix",        circuit:"Suzuka Circuit",        loc:"Suzuka",         flag:"🇯🇵", start:"2025-04-04T00:00", race:"2025-04-06T14:00"},
+    {name:"Bahrain Grand Prix",         circuit:"Bahrain Int'l Circuit", loc:"Sakhir",         flag:"🇧🇭", start:"2025-04-11T00:00", race:"2025-04-13T18:00"},
+    {name:"Saudi Arabian Grand Prix",   circuit:"Jeddah Corniche Circuit",loc:"Jeddah",        flag:"🇸🇦", start:"2025-04-18T00:00", race:"2025-04-20T20:00"},
+    {name:"Miami Grand Prix",           circuit:"Miami Int'l Autodrome", loc:"Miami",          flag:"🇺🇸", start:"2025-05-02T00:00", race:"2025-05-04T16:00"},
+    {name:"Emilia-Romagna Grand Prix",  circuit:"Imola Circuit",         loc:"Imola",          flag:"🇮🇹", start:"2025-05-16T00:00", race:"2025-05-18T15:00"},
+    {name:"Monaco Grand Prix",          circuit:"Circuit de Monaco",     loc:"Monte Carlo",    flag:"🇲🇨", start:"2025-05-23T00:00", race:"2025-05-25T15:00"},
+    {name:"Spanish Grand Prix",         circuit:"Circuit de Barcelona-Catalunya", loc:"Barcelona", flag:"🇪🇸", start:"2025-05-30T00:00", race:"2025-06-01T15:00"},
+    {name:"Canadian Grand Prix",        circuit:"Circuit Gilles Villeneuve", loc:"Montreal",   flag:"🇨🇦", start:"2025-06-13T00:00", race:"2025-06-15T14:00"},
+    {name:"Austrian Grand Prix",        circuit:"Red Bull Ring",         loc:"Spielberg",      flag:"🇦🇹", start:"2025-06-27T00:00", race:"2025-06-29T15:00"},
+    {name:"British Grand Prix",         circuit:"Silverstone Circuit",   loc:"Silverstone",    flag:"🇬🇧", start:"2025-07-04T00:00", race:"2025-07-06T15:00"},
+    {name:"Belgian Grand Prix",         circuit:"Spa-Francorchamps",     loc:"Spa",            flag:"🇧🇪", start:"2025-07-25T00:00", race:"2025-07-27T15:00"},
+    {name:"Hungarian Grand Prix",       circuit:"Hungaroring",           loc:"Budapest",       flag:"🇭🇺", start:"2025-08-01T00:00", race:"2025-08-03T15:00"},
+    {name:"Dutch Grand Prix",           circuit:"Circuit Zandvoort",     loc:"Zandvoort",      flag:"🇳🇱", start:"2025-08-29T00:00", race:"2025-08-31T15:00"},
+    {name:"Italian Grand Prix",         circuit:"Monza Circuit",         loc:"Monza",          flag:"🇮🇹", start:"2025-09-05T00:00", race:"2025-09-07T15:00"},
+    {name:"Azerbaijan Grand Prix",      circuit:"Baku City Circuit",     loc:"Baku",           flag:"🇦🇿", start:"2025-09-19T00:00", race:"2025-09-21T13:00"},
+    {name:"Singapore Grand Prix",       circuit:"Marina Bay Circuit",    loc:"Singapore",      flag:"🇸🇬", start:"2025-10-03T00:00", race:"2025-10-05T20:00"},
+    {name:"United States Grand Prix",   circuit:"Circuit of the Americas",loc:"Austin",        flag:"🇺🇸", start:"2025-10-17T00:00", race:"2025-10-19T14:00"},
+    {name:"Mexico City Grand Prix",     circuit:"Autódromo H. Rodríguez",loc:"Mexico City",    flag:"🇲🇽", start:"2025-10-24T00:00", race:"2025-10-26T14:00"},
+    {name:"São Paulo Grand Prix",       circuit:"Interlagos Circuit",    loc:"São Paulo",      flag:"🇧🇷", start:"2025-11-07T00:00", race:"2025-11-09T14:00"},
+    {name:"Las Vegas Grand Prix",       circuit:"Las Vegas Strip Circuit",loc:"Las Vegas",     flag:"🇺🇸", start:"2025-11-20T00:00", race:"2025-11-22T20:00"},
+    {name:"Qatar Grand Prix",           circuit:"Lusail Int'l Circuit",  loc:"Lusail",         flag:"🇶🇦", start:"2025-11-28T00:00", race:"2025-11-30T19:00"},
+    {name:"Abu Dhabi Grand Prix",       circuit:"Yas Marina Circuit",    loc:"Abu Dhabi",      flag:"🇦🇪", start:"2025-12-05T00:00", race:"2025-12-07T17:00"}
+  ];
+
+  function parse(s){
+    var p = s.split("T"), d = p[0].split("-").map(Number), t = (p[1]||"0:0").split(":").map(Number);
+    return new Date(d[0], d[1]-1, d[2], t[0]||0, t[1]||0, 0);
+  }
+  function pad(n){ return String(n).length < 2 ? "0"+n : ""+n; }
+  function fmtRange(a, b){
+    var o = {day:"numeric", month:"short"};
+    return a.toLocaleDateString("en-GB", o) + " – " + b.toLocaleDateString("en-GB", o);
+  }
+  function sameDay(a, b){
+    return a.getFullYear()===b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate();
+  }
+  var $ = function(id){ return document.getElementById(id); };
+
+  function showStatus(html){
+    $("rc-timer").classList.add("hidden");
+    var st = $("rc-status");
+    st.classList.remove("hidden");
+    st.innerHTML = html;
+  }
+  function showTimer(){
+    $("rc-status").classList.add("hidden");
+    $("rc-timer").classList.remove("hidden");
+  }
+
+  function tick(){
+    var now = new Date(), race = null;
+    for (var i=0; i<RACES.length; i++){
+      var end = parse(RACES[i].race).getTime() + 4*3600*1000; // race ~ over after 4h
+      if (now.getTime() <= end){ race = RACES[i]; break; }
+    }
+
+    if (!race){ // season finished
+      $("rc-label").textContent = "Season Complete";
+      $("rc-name").textContent = "2025 F1 Season Has Concluded";
+      $("rc-flag").textContent = "🏁";
+      $("rc-circuit").textContent = "That's a wrap on 24 races.";
+      $("rc-date").textContent = "";
+      showStatus('<a href="seasons/2025/" class="inline-flex items-center gap-2 bg-f1-red hover:bg-red-700 text-white font-semibold px-5 py-3 rounded-lg transition-colors">View 2025 Results →</a>');
+      return;
+    }
+
+    var start = parse(race.start), raceDt = parse(race.race);
+    $("rc-name").textContent = race.name;
+    $("rc-flag").textContent = race.flag;
+    $("rc-circuit").textContent = race.circuit + ", " + race.loc;
+    $("rc-date").textContent = "· " + fmtRange(start, raceDt);
+
+    if (now >= start){ // race weekend in progress (Fri–Sun)
+      if (sameDay(now, raceDt) || now >= raceDt){
+        $("rc-label").textContent = "It's Race Day";
+        showStatus('<div class="flex items-center gap-3 bg-f1-red/10 border border-f1-red/50 rounded-lg px-5 py-3 animate-pulse"><i class="fa-solid fa-flag-checkered text-f1-red text-2xl"></i><span class="font-heading font-bold text-lg sm:text-2xl text-f1-white tracking-wide">RACE DAY — LIGHTS OUT!</span></div>');
+      } else {
+        $("rc-label").textContent = "Happening Now";
+        showStatus('<div class="flex items-center gap-3 bg-f1-red/10 border border-f1-red/50 rounded-lg px-5 py-3"><i class="fa-solid fa-flag-checkered text-f1-red text-2xl animate-pulse"></i><span class="font-heading font-bold text-lg sm:text-2xl text-f1-white tracking-wide">RACE WEEKEND LIVE</span></div>');
+      }
+      return;
+    }
+
+    // counting down to the race
+    $("rc-label").textContent = "Next Race";
+    showTimer();
+    var diff = raceDt.getTime() - now.getTime();
+    var days = Math.floor(diff / 86400000); diff -= days*86400000;
+    var hrs  = Math.floor(diff / 3600000);  diff -= hrs*3600000;
+    var mins = Math.floor(diff / 60000);     diff -= mins*60000;
+    var secs = Math.floor(diff / 1000);
+    $("cd-days").textContent  = pad(days);
+    $("cd-hours").textContent = pad(hrs);
+    $("cd-mins").textContent  = pad(mins);
+    $("cd-secs").textContent  = pad(secs);
+  }
+
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+<script src="/search.js" defer></script>
 </body></html>
