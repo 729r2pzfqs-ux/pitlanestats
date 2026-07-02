@@ -1,0 +1,7 @@
+build.log
+BUILD_DONE
+_h2h_pages.json
+.claude/
+__pycache__/
+.venv/
+.DS_Store
