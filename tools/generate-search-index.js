@@ -35,6 +35,7 @@ const SECTIONS = [
   ['records', 'Records'],
   ['wet-weather', 'Wet Weather'],
   ['reliability', 'Reliability'],
+  ['form-guide', 'Form Guide'],
   ['points-history', 'Points'],
   ['rookie-seasons', 'Rookie Seasons'],
   ['calendar', 'Calendar'],
@@ -72,10 +73,12 @@ function decodeEntities(s) {
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
-    .replace(/&#0?39;|&apos;|&rsquo;/g, "'")
+    .replace(/&apos;|&rsquo;/g, "'")
     .replace(/&nbsp;/g, ' ')
     .replace(/&mdash;/g, '—')
-    .replace(/&ndash;/g, '–');
+    .replace(/&ndash;/g, '–')
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)));
 }
 
 function urlFor(file) {
@@ -99,6 +102,9 @@ for (const [dir, label] of SECTIONS) {
   walk(path.join(ROOT, dir), files);
   for (const file of files) {
     const html = fs.readFileSync(file, 'utf8');
+    // Skip redirect stubs and pages excluded from indexing.
+    if (/<meta[^>]+http-equiv=["']refresh["']/i.test(html)) continue;
+    if (/<meta[^>]+name=["']robots["'][^>]+noindex/i.test(html)) continue;
     const rawTitle = extractTitle(file ? html : '');
     if (!rawTitle) continue;
     const url = urlFor(file);
