@@ -122,6 +122,11 @@
   }
 
   // ---- data ---------------------------------------------------------------
+  // Fold diacritics so "raikkonen" matches "Räikkönen".
+  function fold(s) {
+    return s.normalize ? s.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : s;
+  }
+
   function loadIndex() {
     if (index || loading) return;
     loading = true;
@@ -132,8 +137,8 @@
         // Precompute lowercase title + haystack for fast scoring.
         for (var i = 0; i < index.length; i++) {
           var e = index[i];
-          e[4] = e[0].toLowerCase();
-          e[5] = (e[0] + ' ' + e[2] + ' ' + (e[3] || '')).toLowerCase();
+          e[4] = fold(e[0].toLowerCase());
+          e[5] = fold((e[0] + ' ' + e[2] + ' ' + (e[3] || '')).toLowerCase());
         }
         loading = false;
         if (els.overlay && els.overlay.classList.contains('pls-open')) render();
@@ -200,7 +205,7 @@
   }
 
   function search(q) {
-    q = q.toLowerCase().trim();
+    q = fold(q.toLowerCase().trim());
     if (!q || !index) return [];
     var tokens = q.split(/\s+/);
     var scored = [];
