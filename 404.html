@@ -184,7 +184,18 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', sans-serif; }
 <script>
 document.getElementById('search404').addEventListener('keydown', function(e) {
   if (e.key === 'Enter' && this.value.trim()) {
-    window.location.href = '/drivers/index.html';
+    e.preventDefault();
+    var q = this.value.trim();
+    if (window.PLS_openSearch) {
+      window.PLS_openSearch();
+      var inp = document.getElementById('pls-search-input');
+      if (inp) {
+        inp.value = q;
+        inp.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+    } else {
+      window.location.href = '/drivers/index.html';
+    }
   }
 });
 </script>

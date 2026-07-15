@@ -364,35 +364,36 @@ tr:hover td { background: rgba(225,6,0,0.04); }
 <script>
 (function(){
   // 2026 F1 calendar (22 rounds; Bahrain & Saudi Arabia dropped from the original schedule).
-  // start = Friday (weekend opens), race = Sunday race start (local time).
+  // start = Friday (weekend opens), race = Sunday race start (venue-local wall time; tz = venue UTC offset).
   var RACES = [
-    {name:"Australian Grand Prix",      circuit:"Albert Park Circuit",   loc:"Melbourne",      flag:"🇦🇺", start:"2026-03-06T00:00", race:"2026-03-08T15:00"},
-    {name:"Chinese Grand Prix",         circuit:"Shanghai Int'l Circuit", loc:"Shanghai",       flag:"🇨🇳", start:"2026-03-13T00:00", race:"2026-03-15T15:00"},
-    {name:"Japanese Grand Prix",        circuit:"Suzuka Circuit",        loc:"Suzuka",         flag:"🇯🇵", start:"2026-03-27T00:00", race:"2026-03-29T14:00"},
-    {name:"Miami Grand Prix",           circuit:"Miami Int'l Autodrome", loc:"Miami",          flag:"🇺🇸", start:"2026-05-01T00:00", race:"2026-05-03T16:00"},
-    {name:"Canadian Grand Prix",        circuit:"Circuit Gilles Villeneuve", loc:"Montreal",   flag:"🇨🇦", start:"2026-05-22T00:00", race:"2026-05-24T14:00"},
-    {name:"Monaco Grand Prix",          circuit:"Circuit de Monaco",     loc:"Monte Carlo",    flag:"🇲🇨", start:"2026-06-05T00:00", race:"2026-06-07T15:00"},
-    {name:"Barcelona Grand Prix",       circuit:"Circuit de Barcelona-Catalunya", loc:"Barcelona", flag:"🇪🇸", start:"2026-06-12T00:00", race:"2026-06-14T15:00"},
-    {name:"Austrian Grand Prix",        circuit:"Red Bull Ring",         loc:"Spielberg",      flag:"🇦🇹", start:"2026-06-26T00:00", race:"2026-06-28T15:00"},
-    {name:"British Grand Prix",         circuit:"Silverstone Circuit",   loc:"Silverstone",    flag:"🇬🇧", start:"2026-07-03T00:00", race:"2026-07-05T15:00"},
-    {name:"Belgian Grand Prix",         circuit:"Spa-Francorchamps",     loc:"Spa",            flag:"🇧🇪", start:"2026-07-17T00:00", race:"2026-07-19T15:00"},
-    {name:"Hungarian Grand Prix",       circuit:"Hungaroring",           loc:"Budapest",       flag:"🇭🇺", start:"2026-07-24T00:00", race:"2026-07-26T15:00"},
-    {name:"Dutch Grand Prix",           circuit:"Circuit Zandvoort",     loc:"Zandvoort",      flag:"🇳🇱", start:"2026-08-21T00:00", race:"2026-08-23T15:00"},
-    {name:"Italian Grand Prix",         circuit:"Monza Circuit",         loc:"Monza",          flag:"🇮🇹", start:"2026-09-04T00:00", race:"2026-09-06T15:00"},
-    {name:"Spanish Grand Prix",         circuit:"Madring",               loc:"Madrid",         flag:"🇪🇸", start:"2026-09-11T00:00", race:"2026-09-13T15:00"},
-    {name:"Azerbaijan Grand Prix",      circuit:"Baku City Circuit",     loc:"Baku",           flag:"🇦🇿", start:"2026-09-25T00:00", race:"2026-09-27T13:00"},
-    {name:"Singapore Grand Prix",       circuit:"Marina Bay Circuit",    loc:"Singapore",      flag:"🇸🇬", start:"2026-10-09T00:00", race:"2026-10-11T20:00"},
-    {name:"United States Grand Prix",   circuit:"Circuit of the Americas",loc:"Austin",        flag:"🇺🇸", start:"2026-10-23T00:00", race:"2026-10-25T14:00"},
-    {name:"Mexico City Grand Prix",     circuit:"Autódromo H. Rodríguez",loc:"Mexico City",    flag:"🇲🇽", start:"2026-10-30T00:00", race:"2026-11-01T14:00"},
-    {name:"São Paulo Grand Prix",       circuit:"Interlagos Circuit",    loc:"São Paulo",      flag:"🇧🇷", start:"2026-11-06T00:00", race:"2026-11-08T14:00"},
-    {name:"Las Vegas Grand Prix",       circuit:"Las Vegas Strip Circuit",loc:"Las Vegas",     flag:"🇺🇸", start:"2026-11-20T00:00", race:"2026-11-22T20:00"},
-    {name:"Qatar Grand Prix",           circuit:"Lusail Int'l Circuit",  loc:"Lusail",         flag:"🇶🇦", start:"2026-11-27T00:00", race:"2026-11-29T19:00"},
-    {name:"Abu Dhabi Grand Prix",       circuit:"Yas Marina Circuit",    loc:"Abu Dhabi",      flag:"🇦🇪", start:"2026-12-04T00:00", race:"2026-12-06T17:00"}
+    {name:"Australian Grand Prix",      circuit:"Albert Park Circuit",   loc:"Melbourne",      flag:"🇦🇺", start:"2026-03-06T00:00", race:"2026-03-08T15:00", tz:11},
+    {name:"Chinese Grand Prix",         circuit:"Shanghai Int'l Circuit", loc:"Shanghai",       flag:"🇨🇳", start:"2026-03-13T00:00", race:"2026-03-15T15:00", tz:8},
+    {name:"Japanese Grand Prix",        circuit:"Suzuka Circuit",        loc:"Suzuka",         flag:"🇯🇵", start:"2026-03-27T00:00", race:"2026-03-29T14:00", tz:9},
+    {name:"Miami Grand Prix",           circuit:"Miami Int'l Autodrome", loc:"Miami",          flag:"🇺🇸", start:"2026-05-01T00:00", race:"2026-05-03T16:00", tz:-4},
+    {name:"Canadian Grand Prix",        circuit:"Circuit Gilles Villeneuve", loc:"Montreal",   flag:"🇨🇦", start:"2026-05-22T00:00", race:"2026-05-24T14:00", tz:-4},
+    {name:"Monaco Grand Prix",          circuit:"Circuit de Monaco",     loc:"Monte Carlo",    flag:"🇲🇨", start:"2026-06-05T00:00", race:"2026-06-07T15:00", tz:2},
+    {name:"Barcelona Grand Prix",       circuit:"Circuit de Barcelona-Catalunya", loc:"Barcelona", flag:"🇪🇸", start:"2026-06-12T00:00", race:"2026-06-14T15:00", tz:2},
+    {name:"Austrian Grand Prix",        circuit:"Red Bull Ring",         loc:"Spielberg",      flag:"🇦🇹", start:"2026-06-26T00:00", race:"2026-06-28T15:00", tz:2},
+    {name:"British Grand Prix",         circuit:"Silverstone Circuit",   loc:"Silverstone",    flag:"🇬🇧", start:"2026-07-03T00:00", race:"2026-07-05T15:00", tz:1},
+    {name:"Belgian Grand Prix",         circuit:"Spa-Francorchamps",     loc:"Spa",            flag:"🇧🇪", start:"2026-07-17T00:00", race:"2026-07-19T15:00", tz:2},
+    {name:"Hungarian Grand Prix",       circuit:"Hungaroring",           loc:"Budapest",       flag:"🇭🇺", start:"2026-07-24T00:00", race:"2026-07-26T15:00", tz:2},
+    {name:"Dutch Grand Prix",           circuit:"Circuit Zandvoort",     loc:"Zandvoort",      flag:"🇳🇱", start:"2026-08-21T00:00", race:"2026-08-23T15:00", tz:2},
+    {name:"Italian Grand Prix",         circuit:"Monza Circuit",         loc:"Monza",          flag:"🇮🇹", start:"2026-09-04T00:00", race:"2026-09-06T15:00", tz:2},
+    {name:"Spanish Grand Prix",         circuit:"Madring",               loc:"Madrid",         flag:"🇪🇸", start:"2026-09-11T00:00", race:"2026-09-13T15:00", tz:2},
+    {name:"Azerbaijan Grand Prix",      circuit:"Baku City Circuit",     loc:"Baku",           flag:"🇦🇿", start:"2026-09-25T00:00", race:"2026-09-27T13:00", tz:4},
+    {name:"Singapore Grand Prix",       circuit:"Marina Bay Circuit",    loc:"Singapore",      flag:"🇸🇬", start:"2026-10-09T00:00", race:"2026-10-11T20:00", tz:8},
+    {name:"United States Grand Prix",   circuit:"Circuit of the Americas",loc:"Austin",        flag:"🇺🇸", start:"2026-10-23T00:00", race:"2026-10-25T14:00", tz:-5},
+    {name:"Mexico City Grand Prix",     circuit:"Autódromo H. Rodríguez",loc:"Mexico City",    flag:"🇲🇽", start:"2026-10-30T00:00", race:"2026-11-01T14:00", tz:-6},
+    {name:"São Paulo Grand Prix",       circuit:"Interlagos Circuit",    loc:"São Paulo",      flag:"🇧🇷", start:"2026-11-06T00:00", race:"2026-11-08T14:00", tz:-3},
+    {name:"Las Vegas Grand Prix",       circuit:"Las Vegas Strip Circuit",loc:"Las Vegas",     flag:"🇺🇸", start:"2026-11-20T00:00", race:"2026-11-22T20:00", tz:-8},
+    {name:"Qatar Grand Prix",           circuit:"Lusail Int'l Circuit",  loc:"Lusail",         flag:"🇶🇦", start:"2026-11-27T00:00", race:"2026-11-29T19:00", tz:3},
+    {name:"Abu Dhabi Grand Prix",       circuit:"Yas Marina Circuit",    loc:"Abu Dhabi",      flag:"🇦🇪", start:"2026-12-04T00:00", race:"2026-12-06T17:00", tz:4}
   ];
 
-  function parse(s){
+  function parse(s, tz){
+    // s is venue-local wall time; tz is the venue's UTC offset in hours.
     var p = s.split("T"), d = p[0].split("-").map(Number), t = (p[1]||"0:0").split(":").map(Number);
-    return new Date(d[0], d[1]-1, d[2], t[0]||0, t[1]||0, 0);
+    return new Date(Date.UTC(d[0], d[1]-1, d[2], (t[0]||0) - (tz||0), t[1]||0, 0));
   }
   function pad(n){ return String(n).length < 2 ? "0"+n : ""+n; }
   function fmtRange(a, b){
@@ -418,7 +419,7 @@ tr:hover td { background: rgba(225,6,0,0.04); }
   function tick(){
     var now = new Date(), race = null;
     for (var i=0; i<RACES.length; i++){
-      var end = parse(RACES[i].race).getTime() + 4*3600*1000; // race ~ over after 4h
+      var end = parse(RACES[i].race, RACES[i].tz).getTime() + 4*3600*1000; // race ~ over after 4h
       if (now.getTime() <= end){ race = RACES[i]; break; }
     }
 
@@ -432,7 +433,7 @@ tr:hover td { background: rgba(225,6,0,0.04); }
       return;
     }
 
-    var start = parse(race.start), raceDt = parse(race.race);
+    var start = parse(race.start, race.tz), raceDt = parse(race.race, race.tz);
     $("rc-name").textContent = race.name;
     $("rc-flag").textContent = race.flag;
     $("rc-circuit").textContent = race.circuit + ", " + race.loc;
