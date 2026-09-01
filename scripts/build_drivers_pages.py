@@ -92,8 +92,8 @@ for n in range(1, pages + 1):
 
     if n == 1:
         title = 'All F1 Drivers | PitlaneStats'
-        desc = (f'Complete statistics for all {total} Formula 1 drivers including wins, '
-                'championships, and career records.')
+        desc = (f'Complete career statistics for all {total} Formula 1 drivers since 1950 — '
+                'wins, podiums, poles, championships and points, ranked and searchable.')
         breadcrumb_nav = ('<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 sm:px-6 py-3 text-sm">'
                           '<a href="/" class="text-f1-text hover:text-f1-white transition-colors">Home</a>'
                           '<span class="text-f1-border mx-2">/</span>'
@@ -107,8 +107,8 @@ for n in range(1, pages + 1):
         out_path = os.path.join(REPO, 'drivers', 'index.html')
     else:
         title = f'All F1 Drivers – Page {n} of {pages} | PitlaneStats'
-        desc = (f'Career statistics for all {total} Formula 1 drivers, ranked by wins – '
-                f'page {n} of {pages} (drivers {lo + 1}–{hi}).')
+        desc = (f'Career statistics for all {total} Formula 1 drivers since 1950, ranked by wins — '
+                f'page {n} of {pages}, covering drivers {lo + 1}–{hi} with wins, titles, poles and points.')
         breadcrumb_nav = ('<nav aria-label="Breadcrumb" class="max-w-7xl mx-auto px-4 sm:px-6 py-3 text-sm">'
                           '<a href="/" class="text-f1-text hover:text-f1-white transition-colors">Home</a>'
                           '<span class="text-f1-border mx-2">/</span>'
