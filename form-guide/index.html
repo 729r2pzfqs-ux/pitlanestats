@@ -13,8 +13,6 @@
 <meta property="og:url" content="https://pitlanestats.com/form-guide/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PitlaneStats">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/css/tailwind.min.css">
 <style>body{font-family:'Inter',sans-serif}h1,h2,h3,h4,h5,h6{font-family:'Space Grotesk',sans-serif}@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}.ticker-scroll{animation:ticker 90s linear infinite}.ticker-scroll:hover{animation-play-state:paused}tr:hover td{background:rgba(34,197,94,0.05)}.formbg{background-image:linear-gradient(180deg,rgba(34,197,94,0.08),transparent 70%)}.pos-pill{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:7px;font-size:12px;font-weight:600;font-family:'Space Grotesk',sans-serif}th[data-sort]{cursor:pointer;user-select:none}th[data-sort]:hover{color:#EEEEF0}.sort-arrow{opacity:.4;font-size:10px;margin-left:3px}</style>
@@ -360,7 +358,7 @@ function renderTable(){
     var deltaCol=d.delta>1?"#22c55e":(d.delta<-1?"#E10600":"#8E8EA0");
     return '<tr class="border-b border-f1-border">'+
       '<td class="py-3 px-4 font-heading font-bold text-f1-text">'+(i+1)+'</td>'+
-      '<td class="py-3 px-4"><a href="../drivers/'+d.slug+'/" class="font-medium hover:text-f1-form transition-colors">'+d.name+'</a>'+badge(d)+'</td>'+
+      '<td class="py-3 px-4"><a h'+'ref="../drivers/'+d.slug+'/" class="font-medium hover:text-f1-form transition-colors">'+d.name+'</a>'+badge(d)+'</td>'+
       '<td class="py-3 px-4"><span class="inline-flex items-center gap-2 text-f1-text"><span style="display:inline-block;width:3px;height:14px;border-radius:2px;background:'+d.color+'"></span>'+d.team+'</span></td>'+
       '<td class="py-3 px-4"><div class="flex gap-1">'+pills+'</div></td>'+
       '<td class="py-3 px-4 text-center text-lg">'+trendCell(d.trend)+'</td>'+
@@ -377,7 +375,7 @@ function miniCard(d,dir){
   var arrow=dir==="up"?'<i class="fa-solid fa-arrow-up" style="color:#22c55e"></i>':'<i class="fa-solid fa-arrow-down text-f1-red"></i>';
   var pills=d.last5.map(posPill).join(' ');
   var deltaTxt=(d.delta>=0?"+":"")+d.delta.toFixed(1)+" pts/race vs season avg";
-  return '<a href="../drivers/'+d.slug+'/" class="block bg-f1-card border border-f1-border rounded-xl p-4 hover:border-'+(dir==="up"?"f1-form":"f1-red")+' transition-colors">'+
+  return '<a h'+'ref="../drivers/'+d.slug+'/" class="block bg-f1-card border border-f1-border rounded-xl p-4 hover:border-'+(dir==="up"?"f1-form":"f1-red")+' transition-colors">'+
     '<div class="flex items-center justify-between mb-2">'+
       '<div class="flex items-center gap-2"><span style="display:inline-block;width:3px;height:22px;border-radius:2px;background:'+d.color+'"></span><div><div class="font-heading font-bold text-base text-f1-white">'+arrow+' '+d.name+'</div><div class="text-f1-text text-xs">'+d.team+'</div></div></div>'+
       '<div class="text-right"><div class="font-heading font-bold text-xl" style="color:'+(dir==="up"?"#22c55e":"#E10600")+'">'+d.rating+'</div><div class="text-f1-text text-[10px] uppercase tracking-wide">Form</div></div>'+

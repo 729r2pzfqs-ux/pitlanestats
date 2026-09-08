@@ -12,8 +12,6 @@
 <meta property="og:url" content="https://pitlanestats.com/drivers/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PitlaneStats">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="/css/tailwind.min.css">
 <style>
@@ -926,7 +924,7 @@ tr:hover td { background: rgba(225,6,0,0.04); }
   function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
   function rowHtml(d){
     return '<tr class="border-b border-f1-border">' +
-      '<td class="py-2.5 px-4"><a href="/drivers/' + d[1] + '/" class="font-medium hover:text-f1-red transition-colors">' + esc(d[0]) + '</a></td>' +
+      '<td class="py-2.5 px-4"><a h' + 'ref="/drivers/' + d[1] + '/" class="font-medium hover:text-f1-red transition-colors">' + esc(d[0]) + '</a></td>' +
       '<td class="py-2.5 px-4 text-f1-text">' + esc(d[2]) + '</td>' +
       '<td class="py-2.5 px-4 text-center font-heading font-bold text-f1-red">' + d[3] + '</td>' +
       '<td class="py-2.5 px-4 text-center">' + d[4] + '</td>' +
